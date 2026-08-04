@@ -1,0 +1,95 @@
+{% extends "portfolio/base.html" %}
+{% load static %}
+{% block title %}Case Studies | Ana Masiliūnienė{% endblock %}
+
+{% block content %}
+
+<section class="pf-section">
+
+    <div class="pf-container">
+
+        <header class="pf-page-header">
+
+            <p class="pf-eyebrow">
+                CASE STUDIES
+            </p>
+
+            <h1 class="pf-heading-1">
+                From research to working products
+            </h1>
+
+            <p class="pf-lead pf-content-width">
+                Every project follows the same approach: understand people,
+                simplify complexity and build products that are both useful
+                and implementable.
+            </p>
+
+        </header>
+
+        <ol class="pf-project-list">
+
+            {% for project in projects %}
+
+            <li class="pf-project-item">
+
+                    <span class="pf-project-number">
+                        {{ forloop.counter|stringformat:"02d" }}
+                    </span>
+
+                <div class="pf-project-content">
+
+                    <p class="pf-project-meta">
+                        {{ project.subtitle }}
+                    </p>
+
+                    <h2 class="pf-project-title">
+                        {{ project.title }}
+                    </h2>
+
+                    <p class="pf-project-description">
+                        {{ project.summary }}
+                    </p>
+                    <a
+                            href="{% url 'portfolio:project_detail' project.slug %}"
+                            class="pf-primary-link"
+                    >
+                        View case study →
+                    </a>
+
+                </div>
+
+                <a
+                        href="{% url 'portfolio:project_detail' project.slug %}"
+                        class="pf-project-image-link"
+                        aria-label="View {{ project.title }} case study"
+                >
+                    {% if project.cover_image %}
+                    <img
+                            src="{{ project.cover_image.url }}"
+                            alt="{{ project.title }} project preview"
+                            class="pf-project-image"
+                    >
+                    {% else %}
+                    <div class="pf-project-image-placeholder">
+                        <span>{{ project.title }}</span>
+                    </div>
+                    {% endif %}
+                </a>
+
+            </li>
+
+            {% empty %}
+
+            <li class="pf-project-empty">
+                No case studies published yet.
+            </li>
+
+            {% endfor %}
+
+        </ol>
+
+    </div>
+
+</section>
+
+{% endblock %}

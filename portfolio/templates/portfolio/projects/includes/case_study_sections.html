@@ -1,0 +1,201 @@
+<section class="pf-section pf-section--soft pf-case-content">
+
+    <div class="pf-container">
+
+        <article class="pf-case-study">
+
+            {% for section in project.case_study_sections.all %}
+
+                <section
+                        class="pf-case-section"
+                        id="section-{{ section.order|stringformat:'02d' }}"
+                >
+
+                    <header class="pf-case-section-header">
+
+                        {% if section.section_number %}
+
+                            <p class="pf-case-number">
+                                {{ section.section_number }}
+                            </p>
+
+                        {% endif %}
+
+                        <div class="pf-case-section-heading">
+
+                            {% if section.eyebrow %}
+
+                                <p class="pf-eyebrow">
+                                    {{ section.eyebrow }}
+                                </p>
+
+                            {% endif %}
+
+                            <h2 class="pf-heading-2">
+                                {{ section.title }}
+                            </h2>
+
+                            {% if section.introduction %}
+
+                                <div class="pf-body-lg">
+                                    {{ section.introduction|linebreaks }}
+                                </div>
+
+                            {% endif %}
+
+                        </div>
+
+                    </header>
+
+
+                    {% if section.large_image or section.small_image %}
+
+                        <div class="pf-case-media-grid">
+
+                            {% if section.large_image %}
+
+                                <figure class="pf-case-figure pf-case-figure--large">
+
+                                    <img
+                                            src="{{ section.large_image.url }}"
+                                            alt="{{ section.large_image_alt|default:section.title }}"
+                                            class="pf-case-figure-image"
+                                    >
+
+                                    {% if section.large_image_caption %}
+
+                                        <figcaption class="pf-case-figure-caption">
+                                            {{ section.large_image_caption }}
+                                        </figcaption>
+
+                                    {% endif %}
+
+                                </figure>
+
+                            {% endif %}
+
+
+                            {% if section.small_image %}
+
+                                <figure class="pf-case-figure pf-case-figure--small">
+
+                                    <img
+                                            src="{{ section.small_image.url }}"
+                                            alt="{{ section.small_image_alt|default:section.title }}"
+                                            class="pf-case-figure-image"
+                                    >
+
+                                    {% if section.small_image_caption %}
+
+                                        <figcaption class="pf-case-figure-caption">
+                                            {{ section.small_image_caption }}
+                                        </figcaption>
+
+                                    {% endif %}
+
+                                </figure>
+
+                            {% endif %}
+
+                        </div>
+
+                    {% endif %}
+
+
+                    {% with expandables=section.expandables.all %}
+
+                        {% if expandables %}
+
+                            <div class="pf-findings-list">
+
+                                {% for item in expandables %}
+
+                                    <details class="pf-case-details">
+
+                                        <summary class="pf-case-details-summary">
+
+                                            {% if item.number %}
+
+                                                <span class="pf-finding-heading">
+
+                                                    <span class="pf-finding-number">
+                                                        {{ item.number }}
+                                                    </span>
+
+                                                    <span class="pf-finding-title">
+                                                        {{ item.summary }}
+                                                    </span>
+
+                                                </span>
+
+                                            {% else %}
+
+                                                <span>
+                                                    {{ item.summary }}
+                                                </span>
+
+                                            {% endif %}
+
+                                            <span
+                                                    class="pf-details-arrow"
+                                                    aria-hidden="true"
+                                            >
+                                                ↘
+                                            </span>
+
+                                        </summary>
+
+                                        <div class="pf-case-details-content">
+                                            {{ item.content|linebreaks }}
+                                        </div>
+
+                                    </details>
+
+                                {% endfor %}
+
+                            </div>
+
+                        {% endif %}
+
+                    {% endwith %}
+
+
+                    {% if section.closing_text %}
+
+                        <div class="pf-findings-direction">
+
+                            {% if section.closing_label %}
+
+                                <p class="pf-eyebrow">
+                                    {{ section.closing_label }}
+                                </p>
+
+                            {% endif %}
+
+                            <div class="pf-body-lg">
+                                {{ section.closing_text|linebreaks }}
+                            </div>
+
+                        </div>
+
+                    {% endif %}
+
+                </section>
+
+            {% empty %}
+
+                {% if request.user.is_staff %}
+
+                    <p class="pf-body">
+                        No reusable case-study sections have been added yet.
+                    </p>
+
+                {% endif %}
+
+            {% endfor %}
+
+        </article>
+
+    </div>
+
+</section>

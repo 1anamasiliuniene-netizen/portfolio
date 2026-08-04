@@ -1,0 +1,3195 @@
+{% load static %}
+
+<article class="pf-case-study">
+
+    <!-- ======================================================
+         01. PROJECT OVERVIEW — PROJECT-SPECIFIC FACTS
+         Continues the shared overview in project_detail.html
+         ====================================================== -->
+
+    <section class="pf-case-overview-details">
+
+        <p class="pf-eyebrow">
+            Facts
+        </p>
+
+        <dl class="pf-project-facts">
+
+            <div class="pf-project-fact">
+                <dt>Role</dt>
+
+                <dd>
+                    UX Research, Product Design and Full-stack Development
+                </dd>
+            </div>
+
+            <div class="pf-project-fact">
+                <dt>Project type</dt>
+
+                <dd>
+                    Stakeholder-led product
+                </dd>
+            </div>
+
+            <div class="pf-project-fact">
+                <dt>Tools</dt>
+
+                <dd>
+                    Django, Python, HTML, CSS and Figma
+                </dd>
+            </div>
+
+            <div class="pf-project-fact">
+                <dt>Key contribution</dt>
+
+                <dd>
+                    Transformed insights from an existing wellbeing website
+                    into a complete, stakeholder-centred digital platform.
+                </dd>
+            </div>
+
+            <div class="pf-project-fact">
+                <dt>Status</dt>
+
+                <dd>
+                    Prepared for deployment and real-world validation
+                </dd>
+            </div>
+
+        </dl>
+
+    </section>
+
+
+    <!-- ======================================================
+         02. PROJECT ORIGIN
+         ====================================================== -->
+
+    <section
+            class="pf-case-section"
+            id="origin"
+    >
+
+        <header class="pf-case-section-header">
+
+            <p class="pf-case-number">
+                02
+            </p>
+
+            <div class="pf-case-section-heading">
+
+                <p class="pf-eyebrow">
+                    Project origin
+                </p>
+
+                <h2 class="pf-heading-2">
+                    The project began with a conversation, not a software brief
+                </h2>
+
+                <p class="pf-body-lg">
+                    A request for marketing support gradually revealed the
+                    opportunity to build a complete platform connecting
+                    educational content, client guidance and online booking.
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <figure class="pf-case-figure pf-case-figure--wide">
+
+            <img
+                    src="{% static 'portfolio/images/projects/overview.png' %}"
+                    alt="Evolution of A Terapija from a shareable blog into a complete digital wellbeing platform"
+                    class="pf-case-figure-image"
+            >
+
+            <figcaption class="pf-case-figure-caption">
+                The project expanded step by step from a shareable knowledge
+                blog into a complete digital wellbeing platform.
+            </figcaption>
+
+        </figure>
+
+
+        <details class="pf-case-details">
+
+            <summary class="pf-case-details-summary">
+
+                <span>
+                    Read the full origin story
+                </span>
+
+                <span
+                        class="pf-details-arrow"
+                        aria-hidden="true"
+                >
+                    ↘
+                </span>
+
+            </summary>
+
+            <div class="pf-case-details-content">
+
+                <p class="pf-body">
+                    The project began with a conversation rather than a
+                    software idea. A friend was preparing to open a new
+                    wellbeing salon. With extensive professional experience
+                    in Lithuania and abroad, he asked:
+                </p>
+
+                <blockquote class="pf-case-quote">
+                    “Do you know someone who could help me with marketing?”
+                </blockquote>
+
+                <p class="pf-body">
+                    Instead of recommending an agency, I suggested creating
+                    a website with a shareable blog that would allow him to
+                    build trust and communicate his expertise directly.
+                </p>
+
+                <p class="pf-body">
+                    Together we reviewed an existing wellbeing website.
+                    Although it contained valuable information and a large
+                    knowledge library, the experience felt confusing and
+                    text-heavy. We liked the educational approach and the
+                    slightly mystical atmosphere, but wanted to create
+                    something calmer, more spacious and easier to navigate.
+                </p>
+
+                <p class="pf-body">
+                    As our discussions continued, I began asking broader
+                    product questions. Should clients be able to book online?
+                    Would the platform eventually support several therapists?
+                    How would languages, content management, dashboards and
+                    administration work?
+                </p>
+
+                <p class="pf-body">
+                    Each new question added another layer to the idea. The
+                    shareable blog became a service-discovery experience,
+                    then an online booking system, and finally a role-based
+                    platform supporting clients, therapists and the practice
+                    owner.
+                </p>
+
+            </div>
+
+        </details>
+
+    </section>
+
+
+    <!-- ======================================================
+         03. DISCOVERY AND RESEARCH
+         ====================================================== -->
+
+    <section
+            class="pf-case-section"
+            id="discovery"
+    >
+
+        <header class="pf-case-section-header">
+
+            <p class="pf-case-number">
+                03
+            </p>
+
+            <div class="pf-case-section-heading">
+
+                <p class="pf-eyebrow">
+                    Discovery and research
+                </p>
+
+                <h2 class="pf-heading-2">
+                    Understanding the system before designing the interface
+                </h2>
+
+                <div class="pf-case-copy">
+
+                    <p class="pf-body">
+                        I began by translating emerging ideas into Django
+                        models. Mapping the relationships between clients,
+                        therapists, services, content and bookings helped
+                        clarify the product architecture before interface
+                        design began.
+                    </p>
+
+                    <p class="pf-body">
+                        Once the underlying system became clearer, I used
+                        stakeholder conversations, desk research and realistic
+                        client scenarios to define user challenges, personas
+                        and interaction flows.
+                    </p>
+
+                    <p class="pf-body">
+                        Research was treated as an ongoing part of product
+                        development rather than a single preliminary phase.
+                        New findings continuously informed the information
+                        architecture, interface decisions and backend
+                        functionality.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <div class="pf-research-list pf-findings-list">
+
+            <!-- ======================================================
+                 01. STAKEHOLDER INTERVIEW
+                 ====================================================== -->
+
+            <details class="pf-case-details">
+
+                <summary class="pf-case-details-summary">
+
+                    <span class="pf-finding-heading">
+
+                        <span class="pf-finding-number">
+                            01
+                        </span>
+
+                        <span class="pf-finding-title">
+                            Stakeholder interview
+                        </span>
+
+                    </span>
+
+                    <span
+                            class="pf-details-arrow"
+                            aria-hidden="true"
+                    >
+                        ↘
+                    </span>
+
+                </summary>
+
+                <div class="pf-case-details-content">
+
+                    <p class="pf-body">
+                        Exploring client needs, service delivery and the practical
+                        realities of running the wellbeing practice.
+                    </p>
+
+                    <p class="pf-body">
+                        To understand whether the initial idea reflected real business
+                        needs, I conducted a structured interview with the future
+                        practice owner.
+                    </p>
+
+                    <p class="pf-body">
+                        Rather than discussing interface preferences, the conversation
+                        focused on the people the practice was intended to help, the
+                        services being offered and the challenges involved in running a
+                        wellbeing practice.
+                    </p>
+
+                    <p class="pf-body">
+                        Together we explored questions such as:
+                    </p>
+
+                    <ul>
+                        <li>Who are the typical clients?</li>
+                        <li>What motivates them to seek help?</li>
+                        <li>What prevents them from booking?</li>
+                        <li>How do they choose a therapist?</li>
+
+                        <li>
+                            Which information reduces uncertainty before the first
+                            appointment?
+                        </li>
+
+                        <li>
+                            Which administrative tasks consume the most time?
+                        </li>
+                    </ul>
+
+                    <p class="pf-body">
+                        These conversations gradually shifted the project from being a
+                        website with online booking into a service platform supporting
+                        clients and practitioners throughout their journeys.
+                    </p>
+
+                </div>
+
+            </details>
+
+
+            <!-- ======================================================
+                 02. PRODUCT DISCOVERY
+                 ====================================================== -->
+
+            <details class="pf-case-details">
+
+                <summary class="pf-case-details-summary">
+
+                    <span class="pf-finding-heading">
+
+                        <span class="pf-finding-number">
+                            02
+                        </span>
+
+                        <span class="pf-finding-title">
+                            Product discovery
+                        </span>
+
+                    </span>
+
+                    <span
+                            class="pf-details-arrow"
+                            aria-hidden="true"
+                    >
+                        ↘
+                    </span>
+
+                </summary>
+
+                <div class="pf-case-details-content">
+
+                    <p class="pf-body">
+                        Using the questionnaire and content to connect client guidance
+                        with practice insights.
+                    </p>
+
+                    <p class="pf-body">
+                        The questionnaire was designed to create value for both clients
+                        and the practice owner.
+                    </p>
+
+                    <p class="pf-body">
+                        For clients, it validates their concerns by showing that their
+                        challenges are recognised and that relevant support exists.
+                        Completing it can build confidence before the first appointment
+                        and reduce uncertainty when choosing a service.
+                    </p>
+
+                    <p class="pf-body">
+                        For the practice owner, responses provide continuous insight
+                        into client interests and emerging needs. They can reveal topics
+                        worth promoting, indicate demand for future services or
+                        workshops, and inform educational content and marketing
+                        decisions.
+                    </p>
+
+                    <p class="pf-body">
+                        Educational content was not added after the product had been
+                        designed. It was one of the earliest business needs identified
+                        during discovery.
+                    </p>
+
+                    <p class="pf-body">
+                        The blog helps visitors understand services, answer common
+                        questions and build trust before booking. The knowledge library
+                        extends that role through a growing collection of resources.
+                    </p>
+
+                </div>
+
+            </details>
+
+
+            <!-- ======================================================
+                 03. USER RESEARCH
+                 ====================================================== -->
+
+            <details class="pf-case-details">
+
+                <summary class="pf-case-details-summary">
+
+                    <span class="pf-finding-heading">
+
+                        <span class="pf-finding-number">
+                            03
+                        </span>
+
+                        <span class="pf-finding-title">
+                            User research
+                        </span>
+
+                    </span>
+
+                    <span
+                            class="pf-details-arrow"
+                            aria-hidden="true"
+                    >
+                        ↘
+                    </span>
+
+                </summary>
+
+                <div class="pf-case-details-content">
+
+                    <p class="pf-body">
+                        Investigating how people seek, compare and build confidence in
+                        unfamiliar wellbeing services.
+                    </p>
+
+                    <p class="pf-body">
+                        The project began with stakeholder research rather than formal
+                        interviews with a large user sample. As the product evolved, I
+                        complemented the business perspective with desk research into
+                        common help-seeking behaviours and realistic client scenarios.
+                    </p>
+
+                    <p class="pf-body">
+                        The research focused on understanding how people approach
+                        holistic and mental wellbeing services before their first
+                        appointment:
+                    </p>
+
+                    <ul>
+                        <li>
+                            What motivates them to seek professional support?
+                        </li>
+
+                        <li>
+                            What creates hesitation or prevents them from booking?
+                        </li>
+
+                        <li>
+                            Which information helps them feel safe enough to take the
+                            next step?
+                        </li>
+
+                        <li>
+                            How do they compare therapists and services?
+                        </li>
+
+                        <li>
+                            Which questions remain unanswered during the
+                            decision-making process?
+                        </li>
+                    </ul>
+
+                    <p class="pf-body">
+                        Each emerging insight was translated into user flows,
+                        information architecture, interface decisions and backend
+                        functionality.
+                    </p>
+
+                </div>
+
+            </details>
+
+        </div>
+    </section>
+
+    <!-- ======================================================
+         04. KEY INSIGHTS
+         ====================================================== -->
+
+    <section
+            class="pf-case-section pf-findings-list"
+            id="insights"
+    >
+
+        <header class="pf-case-section-header">
+
+            <p class="pf-case-number">
+                04
+            </p>
+
+            <div class="pf-case-section-heading">
+
+                <p class="pf-eyebrow">
+                    Key insights
+                </p>
+
+                <h2 class="pf-heading-2">
+                    Research findings became product principles
+                </h2>
+
+                <p class="pf-body-lg">
+                    Four recurring insights influenced both the user experience and
+                    the system architecture.
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <!-- ======================================================
+             01
+             ====================================================== -->
+
+        <details class="pf-case-details">
+
+            <summary class="pf-case-details-summary">
+
+                <span class="pf-finding-heading">
+
+                    <span class="pf-finding-number">
+                        01
+                    </span>
+
+                    <span class="pf-finding-title">
+                        Warmth before wellness
+                    </span>
+
+                </span>
+
+                <span
+                        class="pf-details-arrow"
+                        aria-hidden="true"
+                >
+                    ↘
+                </span>
+
+            </summary>
+
+            <div class="pf-case-details-content">
+
+                <p class="pf-body">
+                    One message emerged consistently throughout conversations with
+                    the practice owner: the salon should awaken warm feelings before
+                    clients even decide to book.
+                </p>
+
+                <p class="pf-body">
+                    For many visitors, the website would be their first point of
+                    contact. Instead of creating urgency or promoting services
+                    aggressively, the experience needed to feel calm, welcoming and
+                    reassuring.
+                </p>
+
+                <h3 class="pf-heading-3">
+                    How it shaped the product
+                </h3>
+
+                <ul>
+                    <li>Generous whitespace and a slower visual rhythm.</li>
+                    <li>Natural colours and soft visual contrast.</li>
+                    <li>Educational content before promotional messaging.</li>
+                    <li>Compassionate language throughout the interface.</li>
+                    <li>
+                        A questionnaire that helps visitors feel recognised rather
+                        than evaluated.
+                    </li>
+                </ul>
+
+            </div>
+
+        </details>
+
+
+        <!-- ======================================================
+             02
+             ====================================================== -->
+
+        <details class="pf-case-details">
+
+            <summary class="pf-case-details-summary">
+
+                <span class="pf-finding-heading">
+
+                    <span class="pf-finding-number">
+                        02
+                    </span>
+
+                    <span class="pf-finding-title">
+                        Confidence before commitment
+                    </span>
+
+                </span>
+
+                <span
+                        class="pf-details-arrow"
+                        aria-hidden="true"
+                >
+                    ↘
+                </span>
+
+            </summary>
+
+            <div class="pf-case-details-content">
+
+                <p class="pf-body">
+                    People often seek support while feeling uncertain, vulnerable or
+                    overwhelmed. Before booking they want reassurance that someone
+                    understands their situation and that appropriate support exists.
+                </p>
+
+                <h3 class="pf-heading-3">
+                    How it shaped the product
+                </h3>
+
+                <ul>
+                    <li>The questionnaire became a primary entry point.</li>
+                    <li>Visitors can explore their needs before choosing a service.</li>
+                    <li>Service descriptions focus on client situations.</li>
+                    <li>The booking journey reveals information gradually.</li>
+                </ul>
+
+            </div>
+
+        </details>
+
+
+        <!-- ======================================================
+             03
+             ====================================================== -->
+
+        <details class="pf-case-details">
+
+            <summary class="pf-case-details-summary">
+
+                <span class="pf-finding-heading">
+
+                    <span class="pf-finding-number">
+                        03
+                    </span>
+
+                    <span class="pf-finding-title">
+                        Educational content builds trust
+                    </span>
+
+                </span>
+
+                <span
+                        class="pf-details-arrow"
+                        aria-hidden="true"
+                >
+                    ↘
+                </span>
+
+            </summary>
+
+            <div class="pf-case-details-content">
+
+                <p class="pf-body">
+                    Potential clients often spend considerable time researching
+                    wellbeing topics before contacting a professional.
+                </p>
+
+                <p class="pf-body">
+                    Educational content therefore became part of the service rather
+                    than simply supporting marketing.
+                </p>
+
+                <h3 class="pf-heading-3">
+                    How it shaped the product
+                </h3>
+
+                <ul>
+                    <li>A shareable educational blog.</li>
+                    <li>A growing knowledge library.</li>
+                    <li>Links between articles and services.</li>
+                    <li>Content-led discovery alongside booking.</li>
+                </ul>
+
+            </div>
+
+        </details>
+
+
+        <!-- ======================================================
+             04
+             ====================================================== -->
+
+        <details class="pf-case-details">
+
+            <summary class="pf-case-details-summary">
+
+                <span class="pf-finding-heading">
+
+                    <span class="pf-finding-number">
+                        04
+                    </span>
+
+                    <span class="pf-finding-title">
+                        Administration should stay lightweight
+                    </span>
+
+                </span>
+
+                <span
+                        class="pf-details-arrow"
+                        aria-hidden="true"
+                >
+                    ↘
+                </span>
+
+            </summary>
+
+            <div class="pf-case-details-content">
+
+                <p class="pf-body">
+                    The practice owner wanted to spend time with clients rather than
+                    managing software, so administration had to remain simple and
+                    focused.
+                </p>
+
+                <h3 class="pf-heading-3">
+                    How it shaped the product
+                </h3>
+
+                <ul>
+                    <li>Simple booking workflow.</li>
+                    <li>Automatic appointment confirmations.</li>
+                    <li>Minimal therapist administration.</li>
+                    <li>Reusable content management.</li>
+                    <li>Focused dashboards with essential information only.</li>
+                </ul>
+
+            </div>
+
+        </details>
+
+    </section>
+
+    <section
+            class="pf-case-section pf-findings-list"
+            id="personas"
+    >
+
+        <header class="pf-case-section-header">
+
+            <p class="pf-case-number">
+                05
+            </p>
+
+            <div class="pf-case-section-heading">
+
+                <p class="pf-eyebrow">
+                    Personas
+                </p>
+
+                <h2 class="pf-heading-2">
+                    Designing for clients and the practice owner
+                </h2>
+
+                <p class="pf-body-lg">
+                    Three personas helped balance user needs with business goals
+                    throughout product design and implementation.
+                </p>
+
+            </div>
+
+        </header>
+
+        <!-- ======================================================
+
+            01
+
+            ====================================================== -->
+
+        <details class="pf-case-details">
+
+            <summary class="pf-case-details-summary">
+
+                <span class="pf-finding-heading">
+
+                    <span class="pf-finding-number">
+                        01
+                    </span>
+
+                    <span class="pf-finding-title">
+                        Ieva (34) — Seeking balance through holistic wellbeing
+                    </span>
+
+                </span>
+
+                <span
+                        class="pf-details-arrow"
+                        aria-hidden="true"
+                >
+                    ↘
+                </span>
+
+            </summary>
+
+            <div class="pf-case-details-content">
+
+                <h3 class="pf-heading-3">
+
+                    Background
+
+                </h3>
+
+                <p class="pf-body">
+
+                    Ieva works in a demanding professional role and generally takes
+
+                    good care of her health. She has tried yoga, meditation and massage
+
+                    before and is interested in approaches that consider both body and
+
+                    mind. Rather than treating individual symptoms, she is looking for
+
+                    a practitioner who can help restore her overall sense of balance.
+
+                </p>
+
+                <h3 class="pf-heading-3">
+
+                    Goals
+
+                </h3>
+
+                <ul>
+
+                    <li>Find holistic wellbeing services aligned with her values.</li>
+
+                    <li>Learn which practice best suits her current needs.</li>
+
+                    <li>Feel understood before her first appointment.</li>
+
+                    <li>Continue her personal wellbeing journey.</li>
+
+                </ul>
+
+                <h3 class="pf-heading-3">
+
+                    Pain points
+
+                </h3>
+
+                <ul>
+
+                    <li>Many wellness websites focus on selling treatments rather than educating.</li>
+
+                    <li>It is difficult to understand the differences between holistic practices.</li>
+
+                    <li>She wants guidance instead of choosing between unfamiliar services.</li>
+
+                </ul>
+
+                <h3 class="pf-heading-3">
+
+                    Needs
+
+                </h3>
+
+                <ul>
+
+                    <li>Educational articles and practical guidance.</li>
+
+                    <li>A questionnaire that helps identify suitable services.</li>
+
+                    <li>A calm, trustworthy digital experience.</li>
+
+                    <li>Easy online booking.</li>
+
+                </ul>
+
+            </div>
+
+        </details>
+
+        <!-- ======================================================
+         02
+         ====================================================== -->
+
+        <details class="pf-case-details">
+
+            <summary class="pf-case-details-summary">
+
+                <span class="pf-finding-heading">
+
+                    <span class="pf-finding-number">
+                        02
+                    </span>
+
+                    <span class="pf-finding-title">
+                        Lukas (49) — Looking for practical relief close to home
+                    </span>
+
+                </span>
+
+                <span
+                        class="pf-details-arrow"
+                        aria-hidden="true"
+                >
+                    ↘
+                </span>
+
+            </summary>
+
+            <div class="pf-case-details-content">
+
+                <h3 class="pf-heading-3">
+                    Background
+                </h3>
+
+                <p class="pf-body">
+                    Lukas enjoys an active lifestyle and regularly goes jogging around
+                    his neighbourhood. After long working days and frequent exercise,
+                    he often experiences muscle tension and occasional back or shoulder
+                    pain. He is not specifically searching for holistic therapies but
+                    appreciates having a trusted wellbeing practice nearby that can help
+                    him recover and stay active.
+                </p>
+
+                <h3 class="pf-heading-3">
+                    Goals
+                </h3>
+
+                <ul>
+                    <li>Relieve physical discomfort.</li>
+                    <li>Book appointments quickly.</li>
+                    <li>Find effective services close to home.</li>
+                    <li>Return whenever pain or tension appears.</li>
+                </ul>
+
+                <h3 class="pf-heading-3">
+                    Pain points
+                </h3>
+
+                <ul>
+                    <li>Doesn't want to spend time comparing many providers.</li>
+                    <li>Unsure which treatment is appropriate.</li>
+                    <li>Prefers a simple booking process.</li>
+                </ul>
+
+                <h3 class="pf-heading-3">
+                    Needs
+                </h3>
+
+                <ul>
+                    <li>Clear descriptions of available services.</li>
+                    <li>Convenient online scheduling.</li>
+                    <li>Straightforward information.</li>
+                    <li>Confidence that the therapist is experienced.</li>
+                </ul>
+
+            </div>
+
+        </details>
+
+
+        <!-- ======================================================
+             03
+             ====================================================== -->
+
+        <details class="pf-case-details">
+
+            <summary class="pf-case-details-summary">
+
+                <span class="pf-finding-heading">
+
+                    <span class="pf-finding-number">
+                        03
+                    </span>
+
+                    <span class="pf-finding-title">
+                        Practice owner — Creating a welcoming space for healing and growth
+                    </span>
+
+                </span>
+
+                <span
+                        class="pf-details-arrow"
+                        aria-hidden="true"
+                >
+                    ↘
+                </span>
+
+            </summary>
+
+            <div class="pf-case-details-content">
+
+                <h3 class="pf-heading-3">
+                    Background
+                </h3>
+
+                <p class="pf-body">
+                    An experienced holistic therapist with years of practice in
+                    Lithuania and abroad, preparing to open a new wellbeing salon.
+                    The vision extends beyond providing treatments—the goal is to
+                    create a place where people feel welcomed, understood and inspired
+                    to care for their wellbeing.
+                </p>
+
+                <h3 class="pf-heading-3">
+                    Goals
+                </h3>
+
+                <ul>
+                    <li>Build trust before the first appointment.</li>
+                    <li>Share knowledge through educational content.</li>
+                    <li>Reduce administrative workload.</li>
+                    <li>Understand clients' interests and evolving needs.</li>
+                    <li>Grow the practice sustainably while preserving a personal approach.</li>
+                </ul>
+
+                <h3 class="pf-heading-3">
+                    Pain points
+                </h3>
+
+                <ul>
+                    <li>Limited time for marketing and administration.</li>
+                    <li>Repetitive client questions before booking.</li>
+                    <li>Difficulty understanding which services people are actively looking for.</li>
+                    <li>Balancing client care with business development.</li>
+                </ul>
+
+                <h3 class="pf-heading-3">
+                    Needs
+                </h3>
+
+                <ul>
+                    <li>A website that conveys warmth and professionalism.</li>
+                    <li>Simple appointment management.</li>
+                    <li>Client insights gathered through questionnaires.</li>
+                    <li>Content management that supports long-term education and marketing.</li>
+                </ul>
+
+            </div>
+
+        </details>
+        <div class="pf-case-copy">
+
+            <p class="pf-body">
+
+                Together these personas ensured that the platform balanced two
+                complementary perspectives: supporting visitors in choosing the
+                right wellbeing service while giving the practice owner practical
+                tools to deliver and manage those services effectively.
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- ======================================================
+     06. INFORMATION ARCHITECTURE
+     ====================================================== -->
+
+    <section
+            class="pf-case-section"
+            id="information-architecture"
+    >
+
+        <header class="pf-case-section-header">
+
+            <p class="pf-case-number">
+                06
+            </p>
+
+            <div class="pf-case-section-heading">
+
+                <p class="pf-eyebrow">
+                    Information architecture
+                </p>
+
+                <h2 class="pf-heading-2">
+                    Organising the product before designing the screens
+                </h2>
+
+                <p class="pf-body-lg">
+                    Research identified what users needed to achieve. Information
+                    architecture translated those findings into a clear product
+                    structure balancing educational content, service discovery,
+                    booking and practice management.
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <figure class="pf-case-figure pf-case-figure--wide">
+
+            <img
+                    src="{% static 'portfolio/images/projects/Information_architecture.png' %}"
+                    alt="Information architecture of the A Terapija digital wellbeing platform"
+                    class="pf-case-figure-image"
+            >
+
+            <figcaption class="pf-case-figure-caption">
+                Sitemap showing the relationship between public content,
+                service discovery, booking, authenticated dashboards and
+                administration.
+            </figcaption>
+
+        </figure>
+
+
+        <details class="pf-case-details">
+
+            <summary class="pf-case-details-summary">
+
+        <span>
+            Read the architecture decisions
+        </span>
+
+                <span
+                        class="pf-details-arrow"
+                        aria-hidden="true"
+                >
+            ↘
+        </span>
+
+            </summary>
+
+            <div class="pf-case-details-content">
+
+                <p class="pf-body">
+                    Before designing interfaces, I organised the product around the
+                    complete user journey and the responsibilities of each role. The
+                    information architecture connects the public website, service
+                    discovery, authentication and role-based dashboards into one
+                    coherent system.
+                </p>
+
+                <h3 class="pf-heading-3">
+                    Public experience before authentication
+                </h3>
+
+                <p class="pf-body">
+                    Visitors can learn about the practice, explore educational content,
+                    understand available services and complete the self-assessment
+                    questionnaire before creating an account. This reduces friction and
+                    allows people to build confidence before booking.
+                </p>
+
+                <h3 class="pf-heading-3">
+                    Role-based experiences
+                </h3>
+
+                <p class="pf-body">
+                    After authentication, the platform adapts to three user roles.
+                    Clients, therapists and administrators each receive focused
+                    dashboards containing only the information and actions relevant to
+                    their responsibilities, while sharing the same underlying product
+                    services.
+                </p>
+
+                <h3 class="pf-heading-3">
+                    Designed as one scalable product
+                </h3>
+
+                <p class="pf-body">
+                    The architecture separates user experience from business logic.
+                    Shared services such as users, bookings, content, questionnaires,
+                    availability and notifications support every role, making the
+                    platform easier to maintain and ready for future expansion,
+                    including additional therapists, multilingual content and new
+                    services.
+                </p>
+
+            </div>
+
+        </details>
+
+    </section>
+
+    <!-- ======================================================
+         07. USER FLOW
+         ====================================================== -->
+    <section
+            class="pf-case-section"
+            id="user-flow"
+    >
+
+        <header class="pf-case-section-header">
+
+            <p class="pf-case-number">
+                07
+            </p>
+
+            <div class="pf-case-section-heading">
+
+                <p class="pf-eyebrow">
+                    User flow
+                </p>
+
+                <h2 class="pf-heading-2">
+                    Guiding visitors from curiosity to continued wellbeing
+                </h2>
+
+                <p class="pf-body-lg">
+                    The information architecture translates into a simple user
+                    journey that gradually builds confidence before asking for
+                    commitment.
+                </p>
+
+            </div>
+
+        </header>
+
+        <figure class="pf-case-figure pf-case-figure--wide">
+
+            <img
+                    src="{% static 'portfolio/images/projects/user_flow.png' %}"
+                    alt="User flow for the A Terapija platform"
+                    class="pf-case-figure-image"
+            >
+
+            <figcaption class="pf-case-figure-caption">
+                The journey begins with learning and gradually leads visitors
+                towards booking while supporting long-term engagement through a
+                personal dashboard.
+            </figcaption>
+
+        </figure>
+
+        <div class="pf-case-copy">
+
+            <p class="pf-body">
+                Rather than directing visitors immediately to booking, the flow
+                allows them to explore educational content, understand available
+                services and gain confidence before making a decision. Each step
+                answers common questions and reduces uncertainty, creating a calmer
+                and more supportive experience.
+            </p>
+
+        </div>
+
+    </section>
+
+    <section class="pf-case-section pf-findings-list" id="ux-decisions">
+
+        <header class="pf-case-section-header">
+
+            <p class="pf-case-number">08</p>
+
+            <div class="pf-case-section-heading">
+
+                <p class="pf-eyebrow">UX decisions</p>
+
+                <h2 class="pf-heading-2">
+                    Translating research into product decisions
+                </h2>
+
+                <p class="pf-body-lg">
+                    Every design decision aimed to reduce uncertainty, build trust
+                    and simplify the experience for both clients and the practice owner.
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <details class="pf-case-details">
+
+            <summary class="pf-case-details-summary">
+
+                <span class="pf-finding-heading">
+
+                    <span class="pf-finding-number">
+                        01
+                    </span>
+
+                    <span class="pf-finding-title">
+                        Build trust before asking for commitment
+                    </span>
+
+                </span>
+
+                <span
+                        class="pf-details-arrow"
+                        aria-hidden="true"
+                >
+                    ↘
+                </span>
+
+            </summary>
+
+            <div class="pf-case-details-content">
+
+                <p class="pf-body">
+                    Visitors often arrive with questions rather than a clear intention
+                    to book. Instead of presenting booking as the primary call to
+                    action, the platform encourages exploration through educational
+                    content, service descriptions and information about the therapist.
+                </p>
+
+                <p class="pf-body">
+                    This allows visitors to develop confidence naturally before
+                    scheduling their first appointment.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details class="pf-case-details">
+
+            <summary class="pf-case-details-summary">
+
+                <span class="pf-finding-heading">
+
+                    <span class="pf-finding-number">
+                        02
+                    </span>
+
+                    <span class="pf-finding-title">
+                        The questionnaire as guidance, not a form
+                    </span>
+
+                </span>
+
+                <span
+                        class="pf-details-arrow"
+                        aria-hidden="true"
+                >
+                    ↘
+                </span>
+
+            </summary>
+
+            <div class="pf-case-details-content">
+
+                <p class="pf-body">
+                    The questionnaire became part of the user experience rather than
+                    an administrative form. It helps visitors understand their needs
+                    while providing the practice owner with meaningful insights into
+                    client interests and emerging trends.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details class="pf-case-details">
+
+            <summary class="pf-case-details-summary">
+
+                <span class="pf-finding-heading">
+
+                    <span class="pf-finding-number">
+                        03
+                    </span>
+
+                    <span class="pf-finding-title">
+                        Content as part of the service
+                    </span>
+
+                </span>
+
+                <span
+                        class="pf-details-arrow"
+                        aria-hidden="true"
+                >
+                    ↘
+                </span>
+
+            </summary>
+
+            <div class="pf-case-details-content">
+
+                <p class="pf-body">
+                    Educational articles became a core product feature rather than
+                    marketing content. They answer common questions, explain holistic
+                    approaches and help visitors make informed decisions before booking.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details class="pf-case-details">
+
+            <summary class="pf-case-details-summary">
+
+                <span class="pf-finding-heading">
+
+                    <span class="pf-finding-number">
+                        04
+                    </span>
+
+                    <span class="pf-finding-title">
+                        Calm visual hierarchy
+                    </span>
+
+                </span>
+
+                <span
+                        class="pf-details-arrow"
+                        aria-hidden="true"
+                >
+                    ↘
+                </span>
+
+            </summary>
+
+            <div class="pf-case-details-content">
+
+                <p class="pf-body">
+                    Generous whitespace, restrained colours and clear typography slow
+                    the reading rhythm and create an atmosphere that reflects the
+                    physical practice instead of competing for attention.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details class="pf-case-details">
+
+            <summary class="pf-case-details-summary">
+
+                <span class="pf-finding-heading">
+
+                    <span class="pf-finding-number">
+                        05
+                    </span>
+
+                    <span class="pf-finding-title">
+                        Progressive decision-making
+                    </span>
+
+                </span>
+
+                <span
+                        class="pf-details-arrow"
+                        aria-hidden="true"
+                >
+                    ↘
+                </span>
+
+            </summary>
+
+            <div class="pf-case-details-content">
+
+                <p class="pf-body">
+                    Visitors first learn about the practice, then explore services,
+                    complete the questionnaire if needed and only afterwards book an
+                    appointment. Breaking the journey into smaller decisions reduces
+                    cognitive load.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details class="pf-case-details">
+
+            <summary class="pf-case-details-summary">
+
+                <span class="pf-finding-heading">
+
+                    <span class="pf-finding-number">
+                        06
+                    </span>
+
+                    <span class="pf-finding-title">
+                        Designing beyond launch
+                    </span>
+
+                </span>
+
+                <span
+                        class="pf-details-arrow"
+                        aria-hidden="true"
+                >
+                    ↘
+                </span>
+
+            </summary>
+
+            <div class="pf-case-details-content">
+
+                <p class="pf-body">
+                    Although the practice launched with one therapist, the platform
+                    was designed to support multiple therapists, multilingual content
+                    and future service expansion without structural redesign.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details class="pf-case-details">
+
+            <summary class="pf-case-details-summary">
+
+                <span class="pf-finding-heading">
+
+                    <span class="pf-finding-number">
+                        07
+                    </span>
+
+                    <span class="pf-finding-title">
+                        Balancing client and business needs
+                    </span>
+
+                </span>
+
+                <span
+                        class="pf-details-arrow"
+                        aria-hidden="true"
+                >
+                    ↘
+                </span>
+
+            </summary>
+
+            <div class="pf-case-details-content">
+
+                <p class="pf-body">
+                    Every feature was evaluated from both perspectives. The product
+                    integrates client guidance, educational content, booking and
+                    practice management into a single ecosystem where improvements for
+                    one user group also create value for the other.
+                </p>
+
+                <ul>
+                    <li>Questionnaire supporting both service discovery and business insights.</li>
+                    <li>Educational content building trust while improving visibility.</li>
+                    <li>Role-based dashboards simplifying administration.</li>
+                </ul>
+            </div>
+        </details>
+    </section>
+
+    <section
+            class="pf-case-section pf-findings-list"
+            id="design-system"
+    >
+
+        <header class="pf-case-section-header">
+
+            <p class="pf-case-number">
+                09
+            </p>
+
+            <div class="pf-case-section-heading">
+
+                <p class="pf-eyebrow">
+                    Design system
+                </p>
+
+                <h2 class="pf-heading-2">
+                    Building consistency through reusable components
+                </h2>
+
+                <p class="pf-body-lg">
+                    As the product expanded from a marketing website into a complete
+                    service platform, I created a reusable design system for both
+                    the public website and the operational application.
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <figure class="pf-case-figure pf-case-figure--wide">
+
+            <img
+                    src="{% static 'portfolio/images/projects/Design_system.png' %}"
+                    alt="A Terapija design system in Figma showing visual foundations and reusable components"
+                    class="pf-case-figure-image"
+            >
+
+            <figcaption class="pf-case-figure-caption">
+                Figma snapshot showing the visual foundations and reusable
+                interface components developed for A Terapija.
+            </figcaption>
+
+        </figure>
+
+
+        <!-- ======================================================
+             01. DESIGN PRINCIPLES
+             ====================================================== -->
+
+        <details class="pf-case-details">
+
+            <summary class="pf-case-details-summary">
+
+                <span class="pf-finding-heading">
+
+                    <span class="pf-finding-number">
+                        01
+                    </span>
+
+                    <span class="pf-finding-title">
+                        Design principles
+                    </span>
+
+                </span>
+
+                <span
+                        class="pf-details-arrow"
+                        aria-hidden="true"
+                >
+                    ↘
+                </span>
+
+            </summary>
+
+            <div class="pf-case-details-content">
+
+                <p class="pf-body">
+                    The system was built around four principles that guided both
+                    visual design and implementation.
+                </p>
+
+                <h3 class="pf-heading-3">
+                    Warmth
+                </h3>
+
+                <p class="pf-body">
+                    The interface needed to reflect the calming and welcoming
+                    atmosphere of the physical practice.
+                </p>
+
+                <h3 class="pf-heading-3">
+                    Clarity
+                </h3>
+
+                <p class="pf-body">
+                    Content and actions were prioritised over decorative complexity,
+                    helping users remain focused and confident.
+                </p>
+
+                <h3 class="pf-heading-3">
+                    Consistency
+                </h3>
+
+                <p class="pf-body">
+                    The public website, booking experience and administrative tools
+                    were designed to feel like parts of one coherent product.
+                </p>
+
+                <h3 class="pf-heading-3">
+                    Scalability
+                </h3>
+
+                <p class="pf-body">
+                    New pages and features could be assembled from existing tokens,
+                    components and layout patterns rather than designed from scratch.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <!-- ======================================================
+             02. FOUNDATIONS
+             ====================================================== -->
+
+        <details class="pf-case-details">
+
+            <summary class="pf-case-details-summary">
+
+                <span class="pf-finding-heading">
+
+                    <span class="pf-finding-number">
+                        02
+                    </span>
+
+                    <span class="pf-finding-title">
+                        Foundations
+                    </span>
+
+                </span>
+
+                <span
+                        class="pf-details-arrow"
+                        aria-hidden="true"
+                >
+                    ↘
+                </span>
+
+            </summary>
+
+            <div class="pf-case-details-content">
+
+                <p class="pf-body">
+                    The design system begins with reusable foundations shared across
+                    the application.
+                </p>
+
+                <ul>
+                    <li>Colour palette and semantic colour tokens.</li>
+                    <li>Typography scale and font roles.</li>
+                    <li>Spacing scale and responsive spacing.</li>
+                    <li>Border-radius values.</li>
+                    <li>Elevation and shadow styles.</li>
+                    <li>Interaction and focus states.</li>
+                    <li>Day and evening themes.</li>
+                </ul>
+
+                <p class="pf-body">
+                    Primitive colour values are separated from semantic tokens.
+                    This allows components to support day and evening themes by
+                    changing variable mappings rather than rewriting individual
+                    styles.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <!-- ======================================================
+             03. COMPONENT LIBRARY
+             ====================================================== -->
+
+        <details class="pf-case-details">
+
+            <summary class="pf-case-details-summary">
+
+                <span class="pf-finding-heading">
+
+                    <span class="pf-finding-number">
+                        03
+                    </span>
+
+                    <span class="pf-finding-title">
+                        Component library
+                    </span>
+
+                </span>
+
+                <span
+                        class="pf-details-arrow"
+                        aria-hidden="true"
+                >
+                    ↘
+                </span>
+
+            </summary>
+
+            <div class="pf-case-details-content">
+
+                <p class="pf-body">
+                    Reusable interface components were developed for both public
+                    and authenticated parts of the platform.
+                </p>
+
+                <ul>
+                    <li>Buttons and action links.</li>
+                    <li>Chips and status badges.</li>
+                    <li>Text inputs, textareas and select controls.</li>
+                    <li>Service, therapist and article cards.</li>
+                    <li>Responsive navigation.</li>
+                    <li>Forms and validation states.</li>
+                    <li>Booking controls.</li>
+                    <li>Dashboards and administrative components.</li>
+                </ul>
+
+                <p class="pf-body">
+                    Components include hover, focus, selected, disabled and
+                    evening-mode variations, helping interaction behaviour remain
+                    consistent throughout the platform.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <!-- ======================================================
+             04. FROM FIGMA TO CODE
+             ====================================================== -->
+
+        <details class="pf-case-details">
+
+            <summary class="pf-case-details-summary">
+
+                <span class="pf-finding-heading">
+
+                    <span class="pf-finding-number">
+                        04
+                    </span>
+
+                    <span class="pf-finding-title">
+                        From Figma to code
+                    </span>
+
+                </span>
+
+                <span
+                        class="pf-details-arrow"
+                        aria-hidden="true"
+                >
+                    ↘
+                </span>
+
+            </summary>
+
+            <div class="pf-case-details-content">
+
+                <p class="pf-body">
+                    Rather than treating the design system as a static document,
+                    I implemented it directly in HTML, CSS and Django templates.
+                    Shared tokens, components and layout patterns became part of
+                    the production code.
+                </p>
+
+                <h3 class="pf-heading-3">
+                    CSS architecture
+                </h3>
+
+                <ul>
+                    <li>
+                        <strong>core.css</strong> — design tokens, typography,
+                        spacing and foundational rules.
+                    </li>
+
+                    <li>
+                        <strong>components.css</strong> — reusable interface
+                        components shared across the application.
+                    </li>
+
+                    <li>
+                        <strong>pages.css</strong> — page-specific layouts and
+                        customisations.
+                    </li>
+                </ul>
+
+                <p class="pf-body">
+                    This structure keeps global styles independent from page-level
+                    implementation and reduces duplicated CSS. New features can be
+                    assembled from existing building blocks while preserving the
+                    established visual language.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <!-- ======================================================
+             05. OUTCOME
+             ====================================================== -->
+
+        <details class="pf-case-details">
+
+            <summary class="pf-case-details-summary">
+
+                <span class="pf-finding-heading">
+
+                    <span class="pf-finding-number">
+                        05
+                    </span>
+
+                    <span class="pf-finding-title">
+                        Outcome
+                    </span>
+
+                </span>
+
+                <span
+                        class="pf-details-arrow"
+                        aria-hidden="true"
+                >
+                    ↘
+                </span>
+
+            </summary>
+
+            <div class="pf-case-details-content">
+
+                <p class="pf-body">
+                    The design system reduced duplicated styling, accelerated
+                    development and created a consistent experience across dozens
+                    of templates and multiple user roles.
+                </p>
+
+                <p class="pf-body">
+                    New pages and features could be built from existing tokens and
+                    components instead of being designed independently, making the
+                    platform easier to maintain, extend and prepare for future
+                    deployment.
+                </p>
+
+            </div>
+
+        </details>
+
+    </section>
+
+
+    <!-- ======================================================
+     10. DJANGO IMPLEMENTATION
+     ====================================================== -->
+
+    <section
+            class="pf-case-section pf-findings-list"
+            id="implementation"
+    >
+
+        <header class="pf-case-section-header">
+
+            <p class="pf-case-number">
+                10
+            </p>
+
+            <div class="pf-case-section-heading">
+
+                <p class="pf-eyebrow">
+                    Django implementation
+                </p>
+
+                <h2 class="pf-heading-2">
+                    Turning UX decisions into a functional product
+                </h2>
+
+                <p class="pf-body-lg">
+                    The platform was implemented as a working Django application
+                    rather than a static prototype. This allowed the experience to
+                    be tested against real data, permissions, scheduling rules and
+                    administrative workflows.
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <!-- ======================================================
+
+             01. PRODUCT ARCHITECTURE
+
+             ====================================================== -->
+
+        <details class="pf-case-details">
+
+            <summary class="pf-case-details-summary">
+
+                <span class="pf-finding-heading">
+
+                    <span class="pf-finding-number">
+                        01
+                    </span>
+
+                    <span class="pf-finding-title">
+                        Architecture driven by product logic
+                    </span>
+
+                </span>
+
+                <span
+                        class="pf-details-arrow"
+                        aria-hidden="true"
+                >
+                    ↘
+                </span>
+
+            </summary>
+
+            <div class="pf-case-details-content">
+
+                <p class="pf-body">
+
+                    I began by translating the service concept into connected data
+
+                    models. This exposed relationships and edge cases before the
+
+                    interface was fully designed.
+
+                </p>
+
+                <p class="pf-body">
+
+                    Clients, therapists, services, bookings, availability,
+
+                    questionnaire responses, articles and notifications became
+
+                    parts of one system rather than isolated pages.
+
+                </p>
+
+                <h3 class="pf-heading-3">
+
+                    Main product entities
+
+                </h3>
+
+                <ul>
+
+                    <li>Users and role-based profiles.</li>
+
+                    <li>Therapists and their services.</li>
+
+                    <li>Service categories.</li>
+
+                    <li>Booking requests and confirmed appointments.</li>
+
+                    <li>Therapist availability and unavailable periods.</li>
+
+                    <li>Questionnaire questions, answers and assessments.</li>
+
+                    <li>Educational articles and categories.</li>
+
+                    <li>Client messages and notifications.</li>
+
+                </ul>
+
+                <p class="pf-body">
+
+                    Designing these relationships first helped define what each
+
+                    user needed to see and which actions should be available at
+
+                    each stage of the journey.
+
+                </p>
+
+            </div>
+
+        </details>
+
+        <!-- ======================================================
+
+             02. ROLE-BASED EXPERIENCE
+
+             ====================================================== -->
+
+        <details class="pf-case-details">
+
+            <summary class="pf-case-details-summary">
+
+                <span class="pf-finding-heading">
+
+                    <span class="pf-finding-number">
+                        02
+                    </span>
+
+                    <span class="pf-finding-title">
+                        Role-based experience
+                    </span>
+
+                </span>
+
+                <span
+                        class="pf-details-arrow"
+                        aria-hidden="true"
+                >
+                    ↘
+                </span>
+
+            </summary>
+
+            <div class="pf-case-details-content">
+
+                <p class="pf-body">
+
+                    The application supports three primary roles. Navigation,
+
+                    permissions and dashboard content adapt to each role, reducing
+
+                    unnecessary options and keeping tasks focused.
+
+                </p>
+
+                <h3 class="pf-heading-3">
+
+                    Clients
+
+                </h3>
+
+                <ul>
+
+                    <li>Register and manage their profile.</li>
+
+                    <li>Complete the self-assessment questionnaire.</li>
+
+                    <li>Book appointments.</li>
+
+                    <li>Review upcoming bookings.</li>
+
+                    <li>Postpone eligible appointments.</li>
+
+                    <li>Receive relevant notifications.</li>
+
+                </ul>
+
+                <h3 class="pf-heading-3">
+
+                    Therapists
+
+                </h3>
+
+                <ul>
+
+                    <li>Manage unavailable periods.</li>
+
+                    <li>Review weekly schedules and bookings.</li>
+
+                    <li>Update professional information.</li>
+
+                    <li>Record received payments.</li>
+
+                </ul>
+
+                <h3 class="pf-heading-3">
+
+                    Administrators
+
+                </h3>
+
+                <ul>
+
+                    <li>Manage therapists and services.</li>
+
+                    <li>Edit questionnaire content.</li>
+
+                    <li>Manage articles and scheduled advice.</li>
+
+                    <li>Review bookings and submitted assessments.</li>
+
+                    <li>Respond to client messages.</li>
+
+                    <li>Manage broader platform settings.</li>
+
+                </ul>
+
+            </div>
+
+        </details>
+
+        <!-- ======================================================
+
+             03. BOOKING LOGIC
+
+             ====================================================== -->
+
+        <details class="pf-case-details">
+
+            <summary class="pf-case-details-summary">
+
+                <span class="pf-finding-heading">
+
+                    <span class="pf-finding-number">
+                        03
+                    </span>
+
+                    <span class="pf-finding-title">
+                        Booking and availability logic
+                    </span>
+
+                </span>
+
+                <span
+                        class="pf-details-arrow"
+                        aria-hidden="true"
+                >
+                    ↘
+                </span>
+
+            </summary>
+
+            <div class="pf-case-details-content">
+
+                <p class="pf-body">
+
+                    The booking system was one of the most complex parts of the
+
+                    implementation. Available time slots are generated from real
+
+                    scheduling data rather than displayed as static options.
+
+                </p>
+
+                <h3 class="pf-heading-3">
+
+                    The system accounts for
+
+                </h3>
+
+                <ul>
+
+                    <li>Therapist availability.</li>
+
+                    <li>Unavailable periods.</li>
+
+                    <li>Existing appointments.</li>
+
+                    <li>Service duration.</li>
+
+                    <li>Transition time between sessions.</li>
+
+                    <li>Prevention of overlapping bookings.</li>
+
+                    <li>Cancellation and postponement rules.</li>
+
+                    <li>Booking and payment statuses.</li>
+
+                </ul>
+
+                <p class="pf-body">
+
+                    Once a client selects a time, the system validates the slot
+
+                    again before saving the booking. This reduces the risk of
+
+                    conflicts caused by outdated availability.
+
+                </p>
+
+                <h3 class="pf-heading-3">
+
+                    Availability by exception
+
+                </h3>
+
+                <p class="pf-body">
+
+                    Instead of requiring therapists to define every working slot,
+
+                    the system treats them as available by default and allows them
+
+                    to block unavailable periods.
+
+                </p>
+
+                <p class="pf-body">
+
+                    Therapists can mark individual hours or complete days as
+
+                    unavailable, while the booking interface calculates the
+
+                    remaining valid slots automatically. This reduces
+
+                    administration and better reflects the needs of a small
+
+                    practice.
+
+                </p>
+
+            </div>
+
+        </details>
+
+        <!-- ======================================================
+
+             04. QUESTIONNAIRE
+
+             ====================================================== -->
+
+        <details class="pf-case-details">
+
+            <summary class="pf-case-details-summary">
+
+                <span class="pf-finding-heading">
+
+                    <span class="pf-finding-number">
+                        04
+                    </span>
+
+                    <span class="pf-finding-title">
+                        Editable questionnaire system
+                    </span>
+
+                </span>
+
+                <span
+                        class="pf-details-arrow"
+                        aria-hidden="true"
+                >
+                    ↘
+                </span>
+
+            </summary>
+
+            <div class="pf-case-details-content">
+
+                <p class="pf-body">
+
+                    The self-assessment questionnaire was implemented as editable
+
+                    content rather than hard-coded interface text.
+
+                </p>
+
+                <h3 class="pf-heading-3">
+
+                    Administrators can
+
+                </h3>
+
+                <ul>
+
+                    <li>Add and edit questions.</li>
+
+                    <li>Define answer options.</li>
+
+                    <li>Control question ordering.</li>
+
+                    <li>Activate or deactivate content.</li>
+
+                    <li>Review submitted assessments.</li>
+
+                </ul>
+
+                <p class="pf-body">
+
+                    Responses are linked to the client and can support service
+
+                    discovery. Aggregated responses also help the practice owner
+
+                    recognise recurring concerns and changing areas of interest.
+
+                </p>
+
+            </div>
+
+        </details>
+
+        <!-- ======================================================
+
+             05. CONTENT MANAGEMENT
+
+             ====================================================== -->
+
+        <details class="pf-case-details">
+
+            <summary class="pf-case-details-summary">
+
+                <span class="pf-finding-heading">
+
+                    <span class="pf-finding-number">
+                        05
+                    </span>
+
+                    <span class="pf-finding-title">
+                        Content management
+                    </span>
+
+                </span>
+
+                <span
+                        class="pf-details-arrow"
+                        aria-hidden="true"
+                >
+                    ↘
+                </span>
+
+            </summary>
+
+            <div class="pf-case-details-content">
+
+                <p class="pf-body">
+
+                    The educational strategy required the practice owner to manage
+
+                    content without editing code. The administration area therefore
+
+                    supports:
+
+                </p>
+
+                <ul>
+
+                    <li>Article creation and editing.</li>
+
+                    <li>Content categories.</li>
+
+                    <li>Article images.</li>
+
+                    <li>Publication status.</li>
+
+                    <li>Scheduled advice.</li>
+
+                    <li>Archive management.</li>
+
+                </ul>
+
+                <p class="pf-body">
+
+                    This turns the knowledge library into a maintainable business
+
+                    tool rather than a collection of static pages.
+
+                </p>
+
+            </div>
+
+        </details>
+
+        <!-- ======================================================
+
+             06. MULTILINGUAL STRUCTURE
+
+             ====================================================== -->
+
+        <details class="pf-case-details">
+
+            <summary class="pf-case-details-summary">
+
+                <span class="pf-finding-heading">
+
+                    <span class="pf-finding-number">
+                        06
+                    </span>
+
+                    <span class="pf-finding-title">
+                        Multilingual structure
+                    </span>
+
+                </span>
+
+                <span
+                        class="pf-details-arrow"
+                        aria-hidden="true"
+                >
+                    ↘
+                </span>
+
+            </summary>
+
+            <div class="pf-case-details-content">
+
+                <p class="pf-body">
+
+                    The platform was designed for Lithuanian and English
+
+                    interfaces.
+
+                </p>
+
+                <p class="pf-body">
+
+                    Django internationalisation tools were used for reusable
+
+                    interface text, while content areas were structured according
+
+                    to actual business needs. Multilingual support was applied
+
+                    selectively instead of duplicating every type of database
+
+                    content unnecessarily.
+
+                </p>
+
+            </div>
+
+        </details>
+
+        <!-- ======================================================
+
+             07. TEMPLATES AND COMPONENTS
+
+             ====================================================== -->
+
+        <details class="pf-case-details">
+
+            <summary class="pf-case-details-summary">
+
+                <span class="pf-finding-heading">
+
+                    <span class="pf-finding-number">
+                        07
+                    </span>
+
+                    <span class="pf-finding-title">
+                        Reusable templates and components
+                    </span>
+
+                </span>
+
+                <span
+                        class="pf-details-arrow"
+                        aria-hidden="true"
+                >
+                    ↘
+                </span>
+
+            </summary>
+
+            <div class="pf-case-details-content">
+
+                <p class="pf-body">
+
+                    Django templates were organised around shared layouts and
+
+                    reusable includes.
+
+                </p>
+
+                <h3 class="pf-heading-3">
+
+                    Reused patterns include
+
+                </h3>
+
+                <ul>
+
+                    <li>Page headers.</li>
+
+                    <li>Form layouts.</li>
+
+                    <li>Booking slot cards.</li>
+
+                    <li>Weekly schedules.</li>
+
+                    <li>Status controls.</li>
+
+                    <li>Dashboard tables.</li>
+
+                    <li>Pagination.</li>
+
+                    <li>Empty states.</li>
+
+                </ul>
+
+                <p class="pf-body">
+
+                    The coded design system was integrated through
+
+                    <strong>core.css</strong>, <strong>app.css</strong> and
+
+                    <strong>public.css</strong>, keeping visual and functional
+
+                    components aligned.
+
+                </p>
+
+            </div>
+
+        </details>
+
+        <!-- ======================================================
+
+             08. RESPONSIVE APPLICATION
+
+             ====================================================== -->
+
+        <details class="pf-case-details">
+
+            <summary class="pf-case-details-summary">
+
+                <span class="pf-finding-heading">
+
+                    <span class="pf-finding-number">
+                        08
+                    </span>
+
+                    <span class="pf-finding-title">
+                        Responsive application design
+                    </span>
+
+                </span>
+
+                <span
+                        class="pf-details-arrow"
+                        aria-hidden="true"
+                >
+                    ↘
+                </span>
+
+            </summary>
+
+            <div class="pf-case-details-content">
+
+                <p class="pf-body">
+
+                    Operational pages were designed to remain usable beyond
+
+                    desktop screens, because clients and practitioners may need to
+
+                    access the platform quickly from a phone.
+
+                </p>
+
+                <h3 class="pf-heading-3">
+
+                    On smaller screens
+
+                </h3>
+
+                <ul>
+
+                    <li>Multi-column layouts collapse.</li>
+
+                    <li>Dashboard tables become labelled cards.</li>
+
+                    <li>Action groups become full-width controls.</li>
+
+                    <li>Booking slots reorganise into compact grids.</li>
+
+                    <li>
+
+                        Complex weekly schedules remain horizontally scrollable.
+
+                    </li>
+
+                    <li>
+
+                        Administrative forms preserve clear hierarchy and
+
+                        touch-friendly spacing.
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </details>
+
+        <!-- ======================================================
+
+             09. IMPLEMENTATION CHALLENGES
+
+             ====================================================== -->
+
+        <details class="pf-case-details">
+
+            <summary class="pf-case-details-summary">
+
+                <span class="pf-finding-heading">
+
+                    <span class="pf-finding-number">
+                        09
+                    </span>
+
+                    <span class="pf-finding-title">
+                        Implementation challenges
+                    </span>
+
+                </span>
+
+                <span
+                        class="pf-details-arrow"
+                        aria-hidden="true"
+                >
+                    ↘
+                </span>
+
+            </summary>
+
+            <div class="pf-case-details-content">
+
+                <p class="pf-body">
+
+                    Several UX decisions became more complex once translated into
+
+                    working software. These challenges required repeated testing
+
+                    of complete flows rather than isolated screens.
+
+                </p>
+
+                <ul>
+
+                    <li>
+
+                        Preserving questionnaire answers across authentication.
+
+                    </li>
+
+                    <li>
+
+                        Preventing guest responses from being attached to the wrong
+
+                        account.
+
+                    </li>
+
+                    <li>Recalculating availability after postponement.</li>
+
+                    <li>Handling buffers around existing appointments.</li>
+
+                    <li>Keeping role-specific navigation understandable.</li>
+
+                    <li>
+
+                        Maintaining consistent day and evening themes across
+
+                        Bootstrap and custom components.
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </details>
+
+        <!-- ======================================================
+
+             10. OUTCOME
+
+             ====================================================== -->
+
+        <details class="pf-case-details">
+
+            <summary class="pf-case-details-summary">
+
+                <span class="pf-finding-heading">
+
+                    <span class="pf-finding-number">
+                        10
+                    </span>
+
+                    <span class="pf-finding-title">
+                        Implementation outcome
+                    </span>
+
+                </span>
+
+                <span
+                        class="pf-details-arrow"
+                        aria-hidden="true"
+                >
+                    ↘
+                </span>
+
+            </summary>
+
+            <div class="pf-case-details-content">
+
+                <p class="pf-body">
+
+                    The Django implementation transformed the original idea of a
+
+                    shareable wellbeing blog into a working service platform.
+
+                </p>
+
+                <p class="pf-body">
+
+                    The final system connects educational content, client guidance,
+
+                    online booking and practice management in one application.
+
+                    Implementing the product against real constraints continuously
+
+                    tested the UX and helped ensure that the designed experience
+
+                    could function as an actual product rather than only as a
+
+                    portfolio concept.
+
+                </p>
+
+            </div>
+
+        </details>
+    </section>
+
+    <!-- ======================================================
+     11. RESULTS
+     ====================================================== -->
+
+    <section
+            class="pf-case-section pf-findings-list"
+            id="results"
+    >
+
+        <header class="pf-case-section-header">
+
+            <p class="pf-case-number">
+                11
+            </p>
+
+            <div class="pf-case-section-heading">
+
+                <p class="pf-eyebrow">
+                    Results
+                </p>
+
+                <h2 class="pf-heading-2">
+                    From an initial website idea to a working service platform
+                </h2>
+
+                <p class="pf-body-lg">
+                    The project evolved far beyond its original concept. What began
+                    as a marketing website with educational content became a
+                    functional platform supporting client wellbeing, service
+                    delivery and practice administration.
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <!-- ======================================================
+             01. PRODUCT OUTCOME
+             ====================================================== -->
+
+        <details class="pf-case-details">
+
+            <summary class="pf-case-details-summary">
+
+                <span class="pf-finding-heading">
+
+                    <span class="pf-finding-number">
+                        01
+                    </span>
+
+                    <span class="pf-finding-title">
+                        Product outcome
+                    </span>
+
+                </span>
+
+                <span
+                        class="pf-details-arrow"
+                        aria-hidden="true"
+                >
+                    ↘
+                </span>
+
+            </summary>
+
+            <div class="pf-case-details-content">
+
+                <p class="pf-body">
+                    The final solution combines public information, educational
+                    content, service discovery, booking and practice management
+                    within a single product.
+                </p>
+
+                <h3 class="pf-heading-3">
+                    The platform includes
+                </h3>
+
+                <ul>
+                    <li>A public website introducing the practice and its philosophy.</li>
+                    <li>An educational knowledge library.</li>
+                    <li>Guided service discovery through a self-assessment questionnaire.</li>
+                    <li>Online appointment booking.</li>
+                    <li>Therapist availability management.</li>
+                    <li>Role-based dashboards for clients, therapists and administrators.</li>
+                    <li>Content management tools.</li>
+                    <li>Multilingual interface support.</li>
+                    <li>Responsive layouts for desktop and mobile devices.</li>
+                </ul>
+
+                <p class="pf-body">
+                    Together, these features form a complete digital service
+                    ecosystem rather than a collection of independent pages.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <!-- ======================================================
+             02. USER EXPERIENCE OUTCOME
+             ====================================================== -->
+
+        <details class="pf-case-details">
+
+            <summary class="pf-case-details-summary">
+
+                <span class="pf-finding-heading">
+
+                    <span class="pf-finding-number">
+                        02
+                    </span>
+
+                    <span class="pf-finding-title">
+                        User experience outcome
+                    </span>
+
+                </span>
+
+                <span
+                        class="pf-details-arrow"
+                        aria-hidden="true"
+                >
+                    ↘
+                </span>
+
+            </summary>
+
+            <div class="pf-case-details-content">
+
+                <p class="pf-body">
+                    The experience supports visitors throughout their
+                    decision-making journey instead of focusing only on booking an
+                    appointment.
+                </p>
+
+                <h3 class="pf-heading-3">
+                    Visitors can
+                </h3>
+
+                <ul>
+                    <li>Learn about holistic wellbeing.</li>
+                    <li>Understand available services.</li>
+                    <li>Identify suitable support through the questionnaire.</li>
+                    <li>Book appointments with confidence.</li>
+                    <li>Manage future interactions through a personal dashboard.</li>
+                </ul>
+
+                <p class="pf-body">
+                    Practitioners benefit from a streamlined workflow that combines
+                    scheduling, availability management, bookings and content
+                    publishing in one place.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <!-- ======================================================
+             03. TECHNICAL OUTCOME
+             ====================================================== -->
+
+        <details class="pf-case-details">
+
+            <summary class="pf-case-details-summary">
+
+                <span class="pf-finding-heading">
+
+                    <span class="pf-finding-number">
+                        03
+                    </span>
+
+                    <span class="pf-finding-title">
+                        Technical outcome
+                    </span>
+
+                </span>
+
+                <span
+                        class="pf-details-arrow"
+                        aria-hidden="true"
+                >
+                    ↘
+                </span>
+
+            </summary>
+
+            <div class="pf-case-details-content">
+
+                <p class="pf-body">
+                    The implementation demonstrates how UX decisions can be
+                    validated inside a functional Django application rather than
+                    remaining interface concepts.
+                </p>
+
+                <h3 class="pf-heading-3">
+                    Implementation highlights
+                </h3>
+
+                <ul>
+                    <li>Scalable Django architecture.</li>
+                    <li>Reusable template components.</li>
+                    <li>Custom CSS design system.</li>
+                    <li>Responsive interfaces.</li>
+                    <li>Reusable CRUD patterns.</li>
+                    <li>Role-based permissions.</li>
+                    <li>Scheduling and booking logic.</li>
+                </ul>
+
+                <p class="pf-body">
+                    Building the product against real data, permissions and booking
+                    constraints ensured that design decisions worked in practice,
+                    not only in mock-ups.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <!-- ======================================================
+             04. PROFESSIONAL OUTCOME
+             ====================================================== -->
+
+        <details class="pf-case-details">
+
+            <summary class="pf-case-details-summary">
+
+                <span class="pf-finding-heading">
+
+                    <span class="pf-finding-number">
+                        04
+                    </span>
+
+                    <span class="pf-finding-title">
+                        Professional outcome
+                    </span>
+
+                </span>
+
+                <span
+                        class="pf-details-arrow"
+                        aria-hidden="true"
+                >
+                    ↘
+                </span>
+
+            </summary>
+
+            <div class="pf-case-details-content">
+
+                <p class="pf-body">
+                    Developing A Terapija allowed me to work across the complete
+                    product lifecycle, connecting research, design and software
+                    implementation within one stakeholder-led project.
+                </p>
+
+                <h3 class="pf-heading-3">
+                    Disciplines combined
+                </h3>
+
+                <ul>
+                    <li>UX research.</li>
+                    <li>Service design.</li>
+                    <li>Information architecture.</li>
+                    <li>Interaction design.</li>
+                    <li>Visual design.</li>
+                    <li>Frontend development (HTML &amp; CSS).</li>
+                    <li>Backend development with Django.</li>
+                </ul>
+
+                <p class="pf-body">
+                    Working across these disciplines strengthened my understanding
+                    of how user needs, business goals and technical implementation
+                    continuously influence one another.
+                </p>
+
+            </div>
+
+        </details>
+
+    </section>
+
+    <!-- ======================================================
+     12. REFLECTION
+     ====================================================== -->
+
+    <section
+            class="pf-case-section"
+            id="reflection"
+    >
+
+        <header class="pf-case-section-header">
+
+            <p class="pf-case-number">
+                12
+            </p>
+
+            <div class="pf-case-section-heading">
+
+                <p class="pf-eyebrow">
+                    Reflection
+                </p>
+
+                <h2 class="pf-heading-2">
+                    What this project taught me
+                </h2>
+
+                <p class="pf-body-lg">
+                    Building A Terapija helped me realise that although my professional roles
+                    have changed—from educology and translation to UX and software development—the
+                    purpose of my work has remained the same: helping people understand, learn and
+                    move forward. I discovered that digital products can become another way of
+                    supporting people, combining education, guidance and technology into meaningful
+                    experiences.
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <details class="pf-case-details">
+
+            <summary class="pf-case-details-summary">
+
+            <span>
+                Read my reflections
+            </span>
+
+                <span
+                        class="pf-details-arrow"
+                        aria-hidden="true"
+                >
+                ↘
+            </span>
+
+            </summary>
+
+            <div class="pf-case-details-content">
+
+                <h3 class="pf-heading-3">
+                    Designing the system before the interface
+                </h3>
+
+                <p class="pf-body">
+                    At the beginning of the project I expected to design a
+                    marketing website. Through stakeholder conversations and product
+                    discovery, it became clear that the real challenge was creating
+                    an integrated service connecting education, guidance, booking
+                    and practice management.
+                </p>
+
+                <p class="pf-body">
+                    Delaying interface design until the information architecture
+                    and Django data model were established resulted in more
+                    coherent decisions and significantly reduced redesign during
+                    development.
+                </p>
+
+                <h3 class="pf-heading-3">
+                    UX and development are stronger together
+                </h3>
+
+                <p class="pf-body">
+                    Working as both designer and developer meant every decision had
+                    to function visually, technically and operationally. Features
+                    such as booking logic, therapist availability and the
+                    questionnaire became exercises in balancing user needs,
+                    business goals and implementation constraints.
+                </p>
+
+                <h3 class="pf-heading-3">
+                    Designing products, not pages
+                </h3>
+
+                <p class="pf-body">
+                    The project reinforced the importance of thinking in systems.
+                    Consistency across public pages, booking journeys, dashboards
+                    and administration became possible only after establishing a
+                    shared design system and reusable frontend architecture.
+                </p>
+
+                <h3 class="pf-heading-3">
+                    What I would improve
+                </h3>
+
+                <p class="pf-body">
+                    If starting the project again, I would involve end users much
+                    earlier through usability testing and structured interviews. I
+                    would also introduce analytics from the beginning to understand
+                    where visitors hesitate and how the booking journey could be
+                    improved.
+                </p>
+
+                <h3 class="pf-heading-3">
+                    The biggest takeaway
+                </h3>
+
+                <blockquote class="pf-case-quote">
+                    Good UX is not about creating attractive screens. It is about
+                    creating clarity from complexity.
+                </blockquote>
+
+                <p class="pf-body">
+                    This project confirmed that I enjoy working across the complete
+                    product lifecycle—from discovery and information architecture
+                    to interface design and implementation. It strengthened my
+                    confidence in collaborating with stakeholders, asking better
+                    questions and turning early ideas into working digital
+                    products.
+                </p>
+
+            </div>
+
+        </details>
+
+    </section>
+
+</article>

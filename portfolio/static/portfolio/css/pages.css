@@ -1,0 +1,1453 @@
+/* ==========================================================
+   ABOUT HERO
+   ========================================================== */
+
+.pf-about-heading {
+    width: min(100%, 78rem);
+}
+
+.pf-about-heading .pf-heading-1 {
+    transform: translateX(-0.08em);
+    max-width: none;
+}
+
+.pf-about-intro {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1.75fr) 22rem;
+    gap: 2rem;
+    align-items: start;
+    margin-top: var(--pf-space-8);
+}
+
+.pf-about-copy .pf-lead,
+.pf-about-copy .pf-body {
+    max-width: none;
+}
+
+.pf-about-copy .pf-lead + .pf-lead {
+    margin-top: var(--pf-space-5);
+}
+
+.pf-about-portrait {
+    justify-self: start;
+    align-self: center;
+    width: min(90%, 22rem);
+    margin-top: 0;
+    margin-left: -1rem;
+}
+
+.pf-about-portrait img {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    border: 1px solid var(--pf-border);
+    border-radius: var(--pf-radius-lg);
+    box-shadow: none;
+}
+
+@media (max-width: 56rem) {
+    .pf-about-heading {
+        width: 100%;
+    }
+
+    .pf-about-intro {
+        grid-template-columns: 1fr;
+        gap: var(--pf-space-7);
+        margin-top: var(--pf-space-7);
+    }
+
+    .pf-about-copy {
+        max-width: 100%;
+    }
+
+    .pf-about-portrait {
+        justify-self: start;
+        width: min(100%, 24rem);
+        margin: 0;
+    }
+
+    .pf-about-portrait img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 30rem) {
+    .pf-about-portrait {
+        width: 100%;
+    }
+}
+
+@media (max-width: 48rem) {
+    .pf-about-portrait {
+        justify-self: center;
+        justify-content: center;
+        width: min(100%, 20rem);
+        margin-inline: auto;
+    }
+
+    .pf-about-portrait img {
+        width: 85%;
+        margin-inline: auto;
+    }
+}
+
+/* ==========================================================
+   TIMELINE
+   ========================================================== */
+
+.pf-timeline {
+    width: min(100%, 78rem);
+}
+
+.pf-timeline-item {
+    grid-template-columns: 3rem minmax(0, 1fr);
+}
+
+.pf-timeline-content {
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+}
+
+.pf-timeline-meta,
+.pf-timeline-title,
+.pf-timeline-tags,
+.pf-timeline-details,
+.pf-timeline-details-content,
+.pf-timeline-text {
+    margin-inline: 0;
+    padding-inline: 0;
+}
+
+.pf-timeline-title {
+    transform: translateX(-0.08em);
+}
+
+.pf-timeline-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--pf-space-2);
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+    transform: translateX(-0.2em);
+}
+
+/* ==========================================================
+   PRINCIPLE CARDS
+   ========================================================== */
+
+@media (max-width: 48rem) {
+    .pf-card-grid {
+        gap: var(--pf-space-4);
+        margin-top: var(--pf-space-6);
+    }
+
+    .pf-card-title {
+        font-size: clamp(1.9rem, 9vw, 2.4rem);
+    }
+}
+
+
+/* ==========================================================
+   CONTACT
+   ========================================================== */
+
+.pf-contact-content {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: clamp(3rem, 7vw, 7rem);
+    align-items: start;
+
+    width: min(100%, 74rem);
+}
+
+.pf-contact-intro {
+    min-width: 0;
+}
+
+.pf-contact-intro .pf-body {
+    max-width: none;
+}
+
+.pf-contact-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--pf-space-3);
+
+    padding-top: var(--pf-space-7);
+}
+
+.pf-contact-links a {
+    color: var(--pf-accent);
+    font-size: var(--pf-text-lg);
+    font-weight: var(--pf-weight-semibold);
+    text-decoration: none;
+}
+
+.pf-contact-links a:hover,
+.pf-contact-links a:focus-visible {
+    color: var(--pf-accent-hover);
+}
+
+@media (max-width: 48rem) {
+    .pf-contact-content {
+        grid-template-columns: 1fr;
+        gap: var(--pf-space-7);
+    }
+
+    .pf-contact-links {
+        padding-top: 0;
+    }
+}
+
+/* ==========================================================
+   COLLAPSIBLE TIMELINE
+   ========================================================== */
+
+.pf-timeline-details {
+    width: 100%;
+    max-width: none;
+    margin-top: var(--pf-space-5);
+}
+
+.pf-timeline-details-content {
+    max-width: 72rem;
+    margin-top: 0;
+}
+
+.pf-timeline-summary {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: var(--pf-space-2);
+
+    margin: 0 0 var(--pf-space-3);
+    padding: 0;
+    border: 0;
+    background: none;
+
+    color: var(--pf-muted);
+    font-size: .95rem;
+    font-weight: 400;
+
+    cursor: pointer;
+    list-style: none;
+}
+
+.pf-timeline-summary::-webkit-details-marker {
+    display: none;
+}
+
+.pf-timeline-summary::after {
+    content: "↓";
+    transition: transform var(--pf-duration-base) var(--pf-ease-out);
+}
+
+.pf-timeline-details[open] .pf-timeline-summary::after {
+    transform: rotate(180deg);
+}
+
+.pf-timeline-summary:hover {
+    color: var(--pf-accent);
+}
+
+
+/* ==========================================================
+   PROJECT LIST
+   ========================================================== */
+
+.pf-project-list {
+    display: grid;
+    gap: var(--pf-space-10);
+
+    margin: var(--pf-space-8) 0 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.pf-page-header .pf-heading-1 {
+    transform: translateX(-0.08em);
+}
+
+.pf-page-header .pf-lead {
+    margin-top: var(--pf-space-5);
+}
+
+.pf-project-item {
+    display: grid;
+    grid-template-columns:
+        3rem
+        minmax(0, 1fr)
+        minmax(20rem, 32rem);
+    gap: clamp(2rem, 5vw, 5rem);
+    align-items: center;
+}
+
+.pf-project-number {
+    align-self: start;
+
+    color: var(--pf-accent);
+    font-size: var(--pf-text-sm);
+    font-weight: var(--pf-weight-semibold);
+    letter-spacing: .08em;
+}
+
+.pf-project-content {
+    min-width: 0;
+}
+
+.pf-project-meta {
+    margin: 0;
+
+    color: var(--pf-accent);
+    font-size: var(--pf-text-sm);
+    font-weight: var(--pf-weight-semibold);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.pf-project-title {
+    margin: var(--pf-space-3) 0 0;
+
+    font-family: var(--pf-font-display);
+    font-size: clamp(2.5rem, 3.8vw, 4rem);
+    font-weight: var(--pf-weight-regular);
+    line-height: 1;
+}
+
+.pf-project-description {
+    max-width: 46rem;
+    margin: var(--pf-space-5) 0 0;
+
+    color: var(--pf-text);
+    font-size: var(--pf-text-lg);
+    line-height: 1.65;
+}
+
+.pf-project-content .pf-primary-link {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: var(--pf-space-6);
+    color: var(--pf-accent);
+    text-decoration: none;
+}
+
+.pf-project-content .pf-primary-link:hover,
+.pf-project-content .pf-primary-link:focus-visible {
+    color: var(--pf-accent-hover);
+}
+
+.pf-project-image-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: var(--pf-space-5);
+
+    border: 1px solid var(--pf-border);
+    border-radius: var(--pf-radius-lg);
+    background: var(--pf-surface-soft);
+
+    text-decoration: none;
+}
+
+.pf-project-image {
+    width: 98%;
+    height: auto;
+    object-fit: contain;
+
+    border-radius: var(--pf-radius-md);
+
+    box-shadow: var(--pf-shadow-lg);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+}
+
+.pf-project-image-link:hover .pf-project-image {
+    transform: translateY(-4px);
+}
+
+.pf-project-image-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 88%;
+    aspect-ratio: 16 / 10;
+
+    margin: auto;
+
+    border-radius: var(--pf-radius-md);
+    background: var(--pf-surface-main);
+    box-shadow: var(--pf-shadow-lg);
+
+    color: var(--pf-muted);
+    font-weight: var(--pf-weight-medium);
+}
+
+.pf-project-detail-figure {
+    margin: 0;
+}
+
+.pf-project-detail-image {
+    width: 100%;
+    height: auto;
+    border-radius: var(--pf-radius-lg);
+    box-shadow: var(--pf-shadow-soft);
+}
+
+@media (max-width: 64rem) {
+    .pf-project-item {
+        grid-template-columns: 2.5rem minmax(0, 1fr);
+    }
+
+    .pf-project-image-link {
+        grid-column: 2;
+        margin-top: var(--pf-space-5);
+    }
+}
+@media (max-width: 48rem) {
+    .pf-project-item {
+        grid-template-columns: 2rem minmax(0, 1fr);
+        gap: var(--pf-space-4);
+    }
+
+    .pf-project-title {
+        font-size: clamp(2.4rem, 12vw, 3.5rem);
+    }
+
+    .pf-project-image-link {
+        grid-column: 1 / -1;
+    }
+}
+/* ==========================================================
+   PROJECT DETAIL
+   ========================================================== */
+
+/* ----------------------------------------------------------
+   Project-page vertical rhythm
+   ---------------------------------------------------------- */
+
+.pf-case-overview {
+    padding-block:
+        var(--pf-space-8)
+        var(--pf-space-7);
+}
+
+.pf-case-content {
+    padding-block:
+        var(--pf-space-7)
+        var(--pf-space-9);
+}
+
+.pf-case-study {
+    display: grid;
+    gap: var(--pf-case-section-gap);
+}
+
+.pf-case-section {
+    width: 100%;
+    scroll-margin-top: 6rem;
+}
+
+.pf-case-section-header {
+    margin-bottom: var(--pf-case-block-gap);
+}
+
+.pf-case-section-heading {
+    width: 100%;
+    max-width: 70rem;
+}
+
+.pf-case-section .pf-heading-2 {
+    margin-top: var(--pf-space-3);
+}
+
+
+/* ----------------------------------------------------------
+   Shared case-study reading column
+   ---------------------------------------------------------- */
+
+.pf-case-copy,
+.pf-case-section-heading .pf-body-lg,
+.pf-case-details-content {
+    width: 100%;
+    max-width: var(--pf-case-reading-width);
+    margin-inline: 0;
+}
+
+.pf-case-copy {
+    margin-top: var(--pf-space-5);
+}
+
+.pf-case-copy .pf-body,
+.pf-case-section-heading .pf-body-lg,
+.pf-case-details-content .pf-body,
+.pf-case-details-content p {
+    width: 100%;
+    max-width: none;
+
+    margin:
+        0
+        0
+        var(--pf-case-copy-gap);
+
+    color: var(--pf-text);
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: var(--pf-weight-regular);
+    line-height: 1.8;
+}
+
+.pf-case-copy .pf-body:last-child,
+.pf-case-section-heading .pf-body-lg:last-child,
+.pf-case-details-content > :last-child {
+    margin-bottom: 0;
+}
+
+
+/* ----------------------------------------------------------
+   Legacy project hero
+   ---------------------------------------------------------- */
+
+.pf-project-hero {
+    width: 100%;
+    margin:
+        var(--pf-space-5)
+        0
+        var(--pf-space-8);
+}
+
+.pf-project-hero-image {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    border: 1px solid var(--pf-border);
+    border-radius: var(--pf-radius-lg);
+    box-shadow: var(--pf-shadow-soft);
+}
+
+.pf-project-hero-copy {
+    margin-top: var(--pf-space-8);
+}
+
+.pf-project-hero-copy .pf-heading-1 {
+    transform: translateX(-0.08em);
+}
+
+.pf-project-hero-copy .pf-lead {
+    margin-top: var(--pf-space-5);
+}
+
+
+/* ----------------------------------------------------------
+   Project facts
+   ---------------------------------------------------------- */
+
+.pf-case-overview-details {
+    width: 100%;
+}
+
+.pf-case-overview-details > .pf-eyebrow {
+    margin-bottom: var(--pf-space-5);
+}
+
+.pf-project-facts {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap:
+        var(--pf-space-6)
+        var(--pf-space-7);
+
+    width: 100%;
+    margin: 0;
+}
+
+.pf-project-fact {
+    min-width: 0;
+    padding-top: var(--pf-space-4);
+
+    border-top: 1px solid var(--pf-border);
+}
+
+.pf-project-fact dt {
+    margin: 0;
+
+    color: var(--pf-muted);
+    font-size: var(--pf-text-sm);
+    font-weight: var(--pf-weight-medium);
+    letter-spacing: var(--pf-letter-wide);
+    text-transform: uppercase;
+}
+
+.pf-project-fact dd {
+    margin: var(--pf-space-3) 0 0;
+
+    color: var(--pf-text);
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+
+/* ----------------------------------------------------------
+   Previous / next project navigation
+   ---------------------------------------------------------- */
+
+.pf-project-navigation {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: end;
+    gap: var(--pf-space-6);
+
+    padding-block: var(--pf-space-9);
+
+    border-top: 1px solid var(--pf-border);
+}
+
+.pf-project-navigation-side--next {
+    text-align: right;
+}
+
+.pf-project-navigation-link,
+.pf-project-navigation-all {
+    color: var(--pf-text);
+    text-decoration: none;
+}
+
+.pf-project-navigation-link {
+    display: inline-flex;
+    flex-direction: column;
+    gap: var(--pf-space-2);
+}
+
+.pf-project-navigation-label {
+    color: var(--pf-muted);
+    font-size: var(--pf-text-sm);
+    font-weight: var(--pf-weight-medium);
+    letter-spacing: var(--pf-letter-wide);
+    text-transform: uppercase;
+}
+
+.pf-project-navigation-title,
+.pf-project-navigation-all {
+    font-weight: var(--pf-weight-medium);
+}
+
+.pf-project-navigation-link:hover,
+.pf-project-navigation-link:focus-visible,
+.pf-project-navigation-all:hover,
+.pf-project-navigation-all:focus-visible {
+    color: var(--pf-accent);
+}
+
+
+/* ==========================================================
+   CASE STUDY CONTENT
+   ========================================================== */
+
+.pf-case-grid,
+.pf-role-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--pf-space-5);
+}
+
+.pf-case-note,
+.pf-role,
+.pf-persona-block,
+.pf-decision {
+    padding: var(--pf-space-6);
+
+    border: 1px solid var(--pf-border);
+    border-radius: var(--pf-radius-lg);
+
+    background: var(--pf-surface-main);
+}
+
+.pf-case-note-label {
+    margin: 0;
+
+    color: var(--pf-accent);
+    font-size: var(--pf-text-sm);
+    font-weight: var(--pf-weight-semibold);
+    letter-spacing: var(--pf-letter-wide);
+    text-transform: uppercase;
+}
+
+.pf-case-note .pf-heading-3,
+.pf-role .pf-heading-3,
+.pf-decision .pf-heading-3 {
+    margin-top: var(--pf-space-3);
+}
+
+.pf-case-note .pf-body,
+.pf-role .pf-body,
+.pf-decision .pf-body {
+    margin-top: var(--pf-space-4);
+}
+
+.pf-persona {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--pf-space-5);
+}
+
+.pf-case-list,
+.pf-implementation-list {
+    margin: var(--pf-space-4) 0 0;
+    padding-left: 1.25rem;
+}
+
+.pf-case-list li,
+.pf-implementation-list li {
+    margin-top: var(--pf-space-2);
+    line-height: 1.6;
+}
+
+.pf-insight-list,
+.pf-decision-list {
+    display: grid;
+    gap: var(--pf-space-5);
+}
+
+.pf-insight {
+    display: grid;
+    grid-template-columns: 3rem minmax(0, 1fr);
+    gap: var(--pf-space-5);
+
+    padding-top: var(--pf-space-5);
+
+    border-top: 1px solid var(--pf-border);
+}
+
+.pf-insight-number {
+    color: var(--pf-accent);
+    font-size: var(--pf-text-sm);
+    font-weight: var(--pf-weight-semibold);
+    letter-spacing: var(--pf-letter-wide);
+}
+
+.pf-insight .pf-heading-3 {
+    margin: 0;
+}
+
+.pf-insight .pf-body {
+    margin-top: var(--pf-space-3);
+}
+
+.pf-flow {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: var(--pf-space-3);
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.pf-flow-step {
+    padding: var(--pf-space-5);
+
+    border-top: 1px solid var(--pf-accent);
+}
+
+.pf-flow-step span {
+    color: var(--pf-accent);
+    font-size: var(--pf-text-sm);
+    font-weight: var(--pf-weight-semibold);
+}
+
+.pf-flow-step p {
+    margin: var(--pf-space-3) 0 0;
+    line-height: 1.55;
+}
+
+.pf-implementation-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap:
+        var(--pf-space-3)
+        var(--pf-space-8);
+
+    max-width: 72rem;
+    margin-top: var(--pf-space-7);
+}
+
+
+/* ==========================================================
+   CASE STUDY TABLE OF CONTENTS
+   ========================================================== */
+
+.pf-case-toc {
+    padding-block:
+        var(--pf-space-6)
+        var(--pf-space-7);
+
+    border-bottom: 1px solid var(--pf-border);
+}
+
+.pf-case-toc .pf-eyebrow {
+    margin-bottom: var(--pf-space-5);
+}
+
+.pf-case-toc-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap:
+        var(--pf-space-2)
+        var(--pf-space-6);
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.pf-case-toc-list a {
+    display: grid;
+    grid-template-columns: 2rem minmax(0, 1fr);
+    align-items: baseline;
+    gap: var(--pf-space-3);
+
+    padding-block: var(--pf-space-3);
+
+    border-bottom: 1px solid var(--pf-border);
+
+    color: var(--pf-muted);
+    text-decoration: none;
+
+    transition:
+        border-color var(--pf-transition),
+        color var(--pf-transition),
+        transform var(--pf-transition);
+}
+
+.pf-case-toc-list a:hover,
+.pf-case-toc-list a:focus-visible {
+    border-color: var(--pf-accent);
+    color: var(--pf-text);
+    transform: translateX(var(--pf-space-1));
+}
+
+.pf-case-toc-number {
+    color: var(--pf-accent);
+    font-size: var(--pf-text-xs);
+    font-weight: var(--pf-weight-semibold);
+    letter-spacing: var(--pf-letter-wide);
+}
+
+.pf-case-anchor,
+.pf-case-section {
+    scroll-margin-top: 6rem;
+}
+
+
+/* ==========================================================
+   PROJECT OVERVIEW
+   ========================================================== */
+
+.pf-project-overview-copy {
+    width: 100%;
+    max-width: 74rem;
+}
+
+.pf-project-overview-copy .pf-heading-1 {
+    max-width: none;
+    margin-bottom: var(--pf-space-3);
+}
+
+.pf-project-overview-copy .pf-lead {
+    width: 100%;
+    max-width: 68rem;
+    margin: 0;
+
+    font-size: clamp(1.5rem, 2.2vw, 2rem);
+    line-height: 1.5;
+}
+
+.pf-project-preview-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+    gap: var(--pf-space-6);
+
+    width: 100%;
+    max-width: 82rem;
+    margin:
+        var(--pf-space-7)
+        auto
+        0;
+}
+
+.pf-project-preview {
+    margin: 0;
+}
+
+.pf-project-preview-image {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    border: 1px solid var(--pf-border);
+    border-radius: var(--pf-radius-lg);
+    box-shadow: var(--pf-shadow-md);
+
+    transition:
+        transform var(--pf-transition),
+        box-shadow var(--pf-transition);
+}
+
+.pf-project-preview:hover .pf-project-preview-image {
+    transform: translateY(-0.25rem);
+    box-shadow: var(--pf-shadow-lg);
+}
+
+.pf-project-preview figcaption {
+    margin-top: var(--pf-space-3);
+
+    color: var(--pf-muted);
+    font-size: var(--pf-text-sm);
+    text-align: center;
+}
+
+.pf-project-preview-placeholder {
+    display: grid;
+    place-items: center;
+
+    aspect-ratio: 16 / 10;
+
+    border: 1px dashed var(--pf-border-strong);
+    border-radius: var(--pf-radius-lg);
+
+    background: var(--pf-bg-soft);
+
+    color: var(--pf-muted);
+    font-size: var(--pf-text-sm);
+}
+
+
+/* ==========================================================
+   PROJECT ORIGIN
+   ========================================================== */
+
+.pf-case-figure {
+    margin: var(--pf-space-7) 0;
+}
+
+.pf-case-figure-image {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    border: 1px solid var(--pf-diagram-border);
+    border-radius: var(--pf-radius-md);
+    box-shadow: none;
+}
+
+.pf-case-figure-caption {
+    margin-top: var(--pf-space-3);
+
+    color: var(--pf-muted);
+    font-size: .9rem;
+    line-height: 1.5;
+    text-align: left;
+}
+
+/* ==========================================================
+   RESEARCH LIST
+   ========================================================== */
+
+.pf-research-list {
+    width: 100%;
+    margin-top: var(--pf-space-8);
+}
+
+.pf-research-list .pf-case-details {
+    margin-top: 0;
+}
+
+.pf-research-list .pf-case-details + .pf-case-details {
+    border-top: 0;
+}
+
+/* ==========================================================
+   CASE STUDY EXPANDABLES
+   ========================================================== */
+
+.pf-case-details-content h3,
+.pf-case-details-content .pf-heading-3 {
+    margin:
+        var(--pf-space-7)
+        0
+        var(--pf-space-4);
+}
+
+.pf-case-details-content h3:first-child,
+.pf-case-details-content .pf-heading-3:first-child {
+    margin-top: 0;
+}
+
+.pf-case-details-content ul,
+.pf-case-details-content ol {
+    width: 100%;
+    margin:
+        0
+        0
+        var(--pf-case-copy-gap);
+    padding-left: 1.5rem;
+}
+
+.pf-case-details-content li {
+    margin-bottom: var(--pf-space-3);
+
+    color: var(--pf-text);
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.pf-case-details-content li:last-child {
+    margin-bottom: 0;
+}
+
+.pf-case-details-content .pf-case-quote {
+    margin:
+        var(--pf-space-7)
+        0;
+
+    padding-left: var(--pf-space-5);
+
+    border-left: 3px solid var(--pf-accent);
+
+    color: var(--pf-text);
+    font-family: var(--pf-font-display);
+    font-size: clamp(1.9rem, 3vw, 2.6rem);
+    font-weight: var(--pf-weight-medium);
+    line-height: 1.3;
+}
+
+
+/* ==========================================================
+   PROJECT DETAIL — RESPONSIVE
+   ========================================================== */
+
+@media (max-width: 64rem) {
+    .pf-project-facts,
+    .pf-case-toc-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .pf-case-grid,
+    .pf-role-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .pf-flow {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 48rem) {
+    .pf-case-overview {
+        padding-block:
+            var(--pf-space-7)
+            var(--pf-space-6);
+    }
+
+    .pf-case-content {
+        padding-block:
+            var(--pf-space-6)
+            var(--pf-space-8);
+    }
+
+    .pf-case-study {
+    display: flex;
+    flex-direction: column;
+    gap: var(--pf-case-section-gap);
+}
+
+    .pf-project-hero-copy {
+        margin-top: var(--pf-space-7);
+    }
+
+    .pf-project-preview-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--pf-space-7);
+    max-width: 82rem;
+    margin: var(--pf-space-7) auto 0;
+}
+
+    .pf-project-overview-copy,
+    .pf-project-overview-copy .pf-lead {
+        max-width: none;
+    }
+
+    .pf-project-overview-copy .pf-lead {
+        font-size: 1.3rem;
+        line-height: 1.55;
+    }
+
+    .pf-project-facts,
+    .pf-case-toc-list,
+    .pf-persona,
+    .pf-implementation-list,
+    .pf-flow {
+        grid-template-columns: 1fr;
+    }
+
+    .pf-project-facts {
+        gap: var(--pf-space-5);
+    }
+
+    .pf-project-fact dd {
+        font-size: 1.1rem;
+    }
+
+    .pf-case-toc-list {
+        gap: 0;
+    }
+
+    .pf-case-toc-list a:hover {
+        transform: none;
+    }
+
+    .pf-insight {
+        grid-template-columns: 2rem minmax(0, 1fr);
+        gap: var(--pf-space-3);
+    }
+
+    .pf-case-note,
+    .pf-role,
+    .pf-persona-block,
+    .pf-decision {
+        padding: var(--pf-space-5);
+    }
+
+    .pf-project-navigation {
+        grid-template-columns: 1fr;
+        align-items: start;
+        gap: var(--pf-space-5);
+    }
+
+    .pf-project-navigation-side--next {
+        text-align: left;
+    }
+
+    .pf-case-details {
+        margin-top: var(--pf-space-6);
+    }
+
+    .pf-case-details-content {
+        padding-bottom: var(--pf-space-6);
+    }
+
+    .pf-case-copy .pf-body,
+    .pf-case-section-heading .pf-body-lg,
+    .pf-case-details-content p,
+    .pf-case-details-content .pf-body,
+    .pf-case-details-content li {
+        font-size: 1.08rem;
+        line-height: 1.75;
+    }
+}
+
+@media (max-width: 40rem) {
+    .pf-case-toc {
+        padding-block:
+            var(--pf-space-5)
+            var(--pf-space-6);
+    }
+}
+
+/* ==========================================================
+   RÉSUMÉ PAGE
+   ========================================================== */
+.pf-resume-hero .pf-lead {
+    width: 100%;
+    max-width: 60rem;
+}
+
+.pf-resume-download {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: var(--pf-space-7);
+
+    width: 100%;
+    margin-top: var(--pf-space-9);
+    padding:
+        var(--pf-space-6)
+        var(--pf-space-7);
+
+    border: 1px solid var(--pf-border);
+    border-radius: var(--pf-radius-md);
+}
+
+.pf-resume-download-copy {
+    max-width: none;
+}
+
+.pf-resume-download-title {
+    max-width: 40rem;
+    margin:
+        var(--pf-space-3)
+        0
+        var(--pf-space-3);
+
+    font-family: var(--pf-font-display);
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    font-weight: var(--pf-weight-regular);
+    line-height: 1.05;
+}
+
+.pf-resume-download-text {
+    max-width: 56rem;
+    margin: 0;
+
+    color: var(--pf-text);
+    font-size: 1.1rem;
+    line-height: 1.65;
+}
+
+.pf-resume-download-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--pf-space-2);
+    flex: 0 0 auto;
+
+    padding-bottom: .2rem;
+
+    border-bottom: 1px solid currentColor;
+
+    color: var(--pf-accent);
+    font-size: 1.05rem;
+    font-weight: var(--pf-weight-medium);
+    text-decoration: none;
+
+    transition:
+        color var(--pf-transition),
+        gap var(--pf-transition);
+}
+
+.pf-resume-download-link:hover {
+    gap: var(--pf-space-3);
+    color: var(--pf-text);
+}
+
+.pf-resume-download-link:focus-visible {
+    border-radius: var(--pf-radius-sm);
+    box-shadow: var(--pf-focus-ring);
+}
+
+.pf-resume-letter {
+    width: 100%;
+    margin-top: var(--pf-space-8);
+}
+
+.pf-resume-certificates {
+    width: 100%;
+    margin-top: var(--pf-space-8);
+}
+
+.pf-resume-certificates .pf-case-details {
+    margin-top: 0;
+}
+
+.pf-certificate-list {
+    display: grid;
+    gap: var(--pf-space-3);
+}
+
+.pf-certificate-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--pf-space-4);
+
+    padding:
+        var(--pf-space-4)
+        0;
+
+    border-bottom: 1px solid var(--pf-border);
+
+    color: var(--pf-text);
+    text-decoration: none;
+}
+
+.pf-certificate-link:first-child {
+    padding-top: 0;
+}
+
+.pf-certificate-link:hover,
+.pf-certificate-link:focus-visible {
+    color: var(--pf-accent);
+}
+
+.pf-certificate-link:focus-visible {
+    border-radius: var(--pf-radius-sm);
+    box-shadow: var(--pf-focus-ring);
+}
+
+.pf-certificate-link span:first-child {
+    display: grid;
+    gap: var(--pf-space-1);
+}
+
+.pf-certificate-link strong {
+    font-size: 1.05rem;
+    font-weight: var(--pf-weight-semibold);
+}
+
+.pf-certificate-link small {
+    color: var(--pf-muted);
+    font-size: .95rem;
+    line-height: 1.5;
+}
+
+.pf-resume-letter .pf-case-details {
+    margin-top: 0;
+}
+
+.pf-resume-letter-body {
+    max-width: var(--pf-reading-width, 46rem);
+}
+
+.pf-resume-letter-body p {
+    margin:
+        0
+        0
+        var(--pf-space-5);
+
+    color: var(--pf-text);
+    font-size: 1.15rem;
+    line-height: 1.85;
+}
+
+.pf-resume-signature {
+    margin-top: var(--pf-space-7);
+}
+
+@media (max-width: 48rem) {
+
+    .pf-resume-hero .pf-lead {
+        max-width: none;
+    }
+
+    .pf-resume-download {
+        align-items: flex-start;
+        flex-direction: column;
+
+        padding:
+            var(--pf-space-5)
+            var(--pf-space-4);
+    }
+
+    .pf-resume-download-link {
+        margin-top: var(--pf-space-2);
+    }
+}
+/* ==========================================================
+   03. RESEARCH FINDINGS
+   ========================================================== */
+
+.pf-findings-list {
+    width: 100%;
+}
+
+/* ----------------------------------------------------------
+   Expanded content
+   ---------------------------------------------------------- */
+
+.pf-findings-list {
+    margin-bottom: var(--pf-space-8);
+}
+
+.pf-findings-direction {
+    max-width: var(--pf-case-reading-width);
+
+    margin-top: var(--pf-space-8);
+    padding-top: var(--pf-space-2);
+
+    border-top: 0;
+}
+
+.pf-case-details + .pf-findings-direction {
+    margin-top: var(--pf-space-8);
+}
+
+.pf-findings-direction .pf-eyebrow {
+    margin: 0 0 var(--pf-space-5);
+}
+
+.pf-findings-direction .pf-body-lg {
+    margin: 0;
+}
+
+/* ----------------------------------------------------------
+   Responsive
+   ---------------------------------------------------------- */
+
+@media (max-width: 48rem) {
+
+    .pf-findings-list .pf-case-details-content {
+        padding-left: calc(2rem + var(--pf-space-3));
+    }
+
+}
+
+@media (max-width: 30rem) {
+
+    .pf-findings-list .pf-case-details-content {
+        padding-left: 0;
+    }
+
+}
+
+/* ==========================================================
+   05. DASHBOARD REDESIGN
+   ========================================================== */
+
+.pf-dashboard-comparison {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: var(--pf-space-8);
+    align-items: start;
+
+    margin-top: var(--pf-space-8);
+}
+
+.pf-dashboard-comparison figure {
+    margin: 0;
+}
+
+.pf-dashboard-comparison img {
+    display: block;
+
+    width: 100%;
+    border-radius: var(--pf-radius-lg);
+
+    border: 1px solid var(--pf-border-color);
+}
+
+.pf-dashboard-comparison figcaption {
+    margin-top: var(--pf-space-3);
+
+    color: var(--pf-text-muted);
+    text-align: center;
+}
+
+/* ==========================================================
+   06. PROJECT MANAGEMENT
+   ========================================================== */

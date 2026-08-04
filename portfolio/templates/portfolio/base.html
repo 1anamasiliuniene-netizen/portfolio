@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{% block title %}Ana Masiliūnienė{% endblock %}</title>
+
+    <meta name="description"
+          content="{% block description %}UX Designer & Researcher{% endblock %}">
+
+    {% load static %}
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'portfolio/css/core.css' %}">
+    <link rel="stylesheet" href="{% static 'portfolio/css/components.css' %}">
+    <link rel="stylesheet" href="{% static 'portfolio/css/pages.css' %}">
+</head>
+
+<body>
+
+{% with current=request.resolver_match.url_name %}
+
+<header class="pf-header">
+
+    <div class="pf-container">
+
+        <nav class="pf-nav" aria-label="Primary">
+
+            <a class="pf-brand"
+               href="{% url 'portfolio:about' %}">
+
+                <span class="pf-brand-name">
+                    Ana Masiliūnienė
+                </span>
+
+                <span class="pf-brand-role">
+                    UX Designer &amp; Researcher
+                </span>
+
+            </a>
+
+            <button
+                class="pf-nav-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="pf-nav-menu"
+                aria-label="Open navigation">
+
+                <span></span>
+                <span></span>
+
+            </button>
+
+            <div class="pf-nav-menu"
+                 id="pf-nav-menu">
+
+                <div class="pf-nav-item pf-nav-item--dropdown">
+
+                   <a
+                       href="{% url 'portfolio:projects_list' %}"
+                       class="pf-nav-link pf-nav-dropdown-toggle {% if current == 'projects_list' or current == 'project_detail' %}is-active{% endif %}"
+                       aria-controls="pf-projects-menu"
+                       aria-expanded="false"
+                   >
+                       Projects
+
+                       <span class="pf-nav-chevron"
+                             aria-hidden="true"></span>
+
+                   </a>
+
+                   <div class="pf-nav-dropdown"
+                        id="pf-projects-menu">
+
+                       {% for project in nav_projects %}
+                       <a class="pf-nav-dropdown-link"
+                          href="{% url 'portfolio:project_detail' slug=project.slug %}">
+
+                            <span>{{ project.title }}</span>
+
+                            <small>{{ project.subtitle }}</small>
+
+                        </a>
+                        {% empty %}
+                        <span class="pf-nav-dropdown-link">No projects yet</span>
+                        {% endfor %}
+
+                    </div>
+
+                </div>
+
+                <a
+                    href="{% url 'portfolio:about' %}"
+                    class="pf-nav-link {% if current == 'about' %}is-active{% endif %}">
+
+                    About
+
+                </a>
+
+                <a href="{% url 'portfolio:resume' %}" class="pf-nav-link {% if current == 'resume' %}is-active{% endif %}">Résumé</a>
+
+                <a href="{% url 'portfolio:about' %}#contact"
+                   class="pf-nav-link">
+                   Get in touch
+                </a>
+
+            </div>
+
+        </nav>
+
+    </div>
+
+</header>
+
+<main>
+
+    {% block content %}
+    {% endblock %}
+
+</main>
+
+<footer class="pf-footer">
+    <div class="pf-container">
+        <p class="pf-footer-text">
+            © 2026 Ana Masiliūnienė · Designed &amp; built with Django, HTML and CSS.
+        </p>
+    </div>
+</footer>
+{% endwith %}
+
+<script src="{% static 'portfolio/js/navigation.js' %}"></script>
+
+</body>
+</html>

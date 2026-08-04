@@ -1,0 +1,73 @@
+<!-- ======================================================
+     FUTURE CASE STUDY — CASE STUDY CONTENTS
+     ====================================================== -->
+
+<nav
+    class="pf-case-toc"
+    aria-label="Future case study contents"
+>
+    <div class="pf-container">
+
+        <p class="pf-eyebrow">
+            Case study contents
+        </p>
+
+        <ol class="pf-case-toc-list">
+
+            <li>
+                <a href="#section-01">
+                    <span class="pf-case-toc-number">01</span>
+                    <span>Project context</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#section-02">
+                    <span class="pf-case-toc-number">02</span>
+                    <span>Research</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#section-03">
+                    <span class="pf-case-toc-number">03</span>
+                    <span>Design process</span>
+                </a>
+            </li>
+
+        </ol>
+
+    </div>
+</nav>
+
+<div class="pf-container">
+
+    {% if project.live_url or project.source_url %}
+    <div class="pf-case-actions">
+
+        {% if project.live_url %}
+        <a
+            href="{{ project.live_url }}"
+            class="pf-case-action"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Live application
+        </a>
+        {% endif %}
+
+        {% if project.source_url %}
+        <a
+            href="{{ project.source_url }}"
+            class="pf-case-action"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Source code
+        </a>
+        {% endif %}
+
+    </div>
+    {% endif %}
+
+</div>

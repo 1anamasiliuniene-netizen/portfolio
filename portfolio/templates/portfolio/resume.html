@@ -1,0 +1,200 @@
+{% extends "portfolio/base.html" %}
+{% load static %}
+
+{% block title %}Résumé | Ana Masiliūnienė{% endblock %}
+
+{% block content %}
+
+<section class="pf-section">
+
+    <div class="pf-container">
+
+        <header class="pf-page-header pf-resume-hero">
+
+            <p class="pf-eyebrow">
+                RÉSUMÉ
+            </p>
+
+            <h1 class="pf-heading-1">
+                UX Designer &amp; Researcher
+            </h1>
+
+            <p class="pf-lead">
+                I design digital products by combining user research,
+                systems thinking, and frontend implementation—from the
+                first stakeholder conversation to a working application.
+            </p>
+
+        </header>
+
+        <section class="pf-resume-download">
+
+            <div class="pf-resume-download-copy">
+
+                <p class="pf-eyebrow">
+                    Curriculum vitae
+                </p>
+
+                <h2 class="pf-resume-download-title">
+                    Download my résumé
+                </h2>
+
+                <p class="pf-resume-download-text">
+                    A concise overview of my experience, education,
+                    selected work and technical skills.
+                </p>
+
+            </div>
+
+            <a
+                class="pf-resume-download-link"
+                href="{% if resume_document %}{{ resume_document.file.url }}{% else %}{% static 'portfolio/files/Ana Masiliuniene_UX_Resume.pdf' %}{% endif %}"
+                download
+            >
+                <span>Download PDF</span>
+                <span aria-hidden="true">↓</span>
+            </a>
+
+        </section>
+
+        {% if additional_certificates %}
+        <section class="pf-resume-certificates">
+
+            <details class="pf-case-details">
+
+                <summary class="pf-case-details-summary">
+
+                    <span>
+                        Additional certificates
+                    </span>
+
+                    <span class="pf-details-arrow" aria-hidden="true">
+                        ↘
+                    </span>
+
+                </summary>
+
+                <div class="pf-case-details-content">
+
+                    <div class="pf-certificate-list">
+
+                        {% for certificate in additional_certificates %}
+                            <a
+                                class="pf-certificate-link"
+                                href="{{ certificate.file.url }}"
+                                download
+                            >
+                                <span>
+                                    <strong>{{ certificate.title }}</strong>
+                                    {% if certificate.issuer %}
+                                        <small>{{ certificate.issuer }}</small>
+                                    {% endif %}
+                                </span>
+                                <span aria-hidden="true">↓</span>
+                            </a>
+                        {% endfor %}
+
+                    </div>
+
+                </div>
+
+            </details>
+
+        </section>
+        {% endif %}
+
+        <section class="pf-resume-letter">
+
+            <details class="pf-case-details">
+
+                <summary class="pf-case-details-summary">
+
+                    <span>
+                        Read my professional statement
+                    </span>
+
+                    <span class="pf-details-arrow" aria-hidden="true">
+                        ↘
+                    </span>
+
+                </summary>
+
+                <div class="pf-case-details-content">
+
+                    <div class="pf-resume-letter-body">
+
+                        <p>Dear Hiring Team,</p>
+
+                        <p>
+                            I am a UX Designer and Researcher with a multidisciplinary
+                            background in education, translation, academic research and
+                            software development. I design digital products by combining
+                            user research, systems thinking and frontend implementation,
+                            translating complex ideas into clear, thoughtful and
+                            user-centered experiences.
+                        </p>
+
+                        <p>
+                            My path into UX design developed naturally from a long-standing
+                            interest in people, learning and the way information shapes
+                            decisions. My academic background strengthened my skills in
+                            research, analysis and communicating complex findings clearly,
+                            while professional translation taught me to pay close attention
+                            to language, meaning and context.
+                        </p>
+
+                        <p>
+                            Through developing A Terapija, a digital wellbeing platform for
+                            a real practice owner, I have worked across the complete product
+                            lifecycle. I led stakeholder discovery, clarified user needs,
+                            developed personas and user journeys, structured the information
+                            architecture, designed responsive interfaces and created a
+                            reusable design system.
+                        </p>
+
+                        <p>
+                            I also implemented the application using Django, HTML, CSS and
+                            JavaScript. Working from early conversations to a functioning
+                            product taught me how closely research, design and implementation
+                            depend on one another. It also strengthened my sense of ownership,
+                            responsibility and ability to move a complex project forward
+                            independently.
+                        </p>
+
+                        <p>
+                            I am particularly interested in roles where research is connected
+                            directly to product decisions and where designers collaborate
+                            closely with stakeholders, developers and other disciplines.
+                            I bring curiosity, analytical thinking, systems awareness and
+                            a strong commitment to creating digital experiences that are
+                            useful, accessible and carefully considered.
+                        </p>
+
+                        <p>
+                            I would welcome the opportunity to contribute my research,
+                            product thinking and design skills while continuing to grow
+                            within an experienced and collaborative team.
+                        </p>
+
+                        <p>
+                            Thank you for your consideration.
+                        </p>
+
+                        <p class="pf-resume-signature">
+                            Sincerely,<br>
+                            <strong>Ana Masiliūnienė</strong>
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </details>
+
+        </section>
+
+    </div>
+
+</section>
+
+{% endblock %}

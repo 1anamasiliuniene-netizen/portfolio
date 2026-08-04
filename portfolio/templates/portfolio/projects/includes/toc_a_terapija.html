@@ -1,0 +1,132 @@
+<nav
+    class="pf-case-toc"
+    aria-label="A Terapija case study contents"
+>
+    <div class="pf-container">
+
+        <p class="pf-eyebrow">
+            Case study contents
+        </p>
+
+        <ol class="pf-case-toc-list">
+
+            <li>
+                <a href="#overview">
+                    <span class="pf-case-toc-number">01</span>
+                    <span>Project overview</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#origin">
+                    <span class="pf-case-toc-number">02</span>
+                    <span>Project origin</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#discovery">
+                    <span class="pf-case-toc-number">03</span>
+                    <span>Discovery and research</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#insights">
+                    <span class="pf-case-toc-number">04</span>
+                    <span>Key insights</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#personas">
+                    <span class="pf-case-toc-number">05</span>
+                    <span>Personas</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#information-architecture">
+                    <span class="pf-case-toc-number">06</span>
+                    <span>Information architecture</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#user-flow">
+                    <span class="pf-case-toc-number">07</span>
+                    <span>User flow</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#ux-decisions">
+                    <span class="pf-case-toc-number">08</span>
+                    <span>UX decisions</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#design-system">
+                    <span class="pf-case-toc-number">09</span>
+                    <span>Design system</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#implementation">
+                    <span class="pf-case-toc-number">10</span>
+                    <span>Django implementation</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#results">
+                    <span class="pf-case-toc-number">11</span>
+                    <span>Results</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#reflection">
+                    <span class="pf-case-toc-number">12</span>
+                    <span>Reflection</span>
+                </a>
+            </li>
+
+        </ol>
+
+    </div>
+</nav>
+
+<div class="pf-container">
+
+    {% if project.live_url or project.source_url %}
+    <div class="pf-case-actions">
+
+        {% if project.live_url %}
+        <a
+            href="{{ project.live_url }}"
+            class="pf-case-action"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Live application
+        </a>
+        {% endif %}
+
+        {% if project.source_url %}
+        <a
+            href="{{ project.source_url }}"
+            class="pf-case-action"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Source code
+        </a>
+        {% endif %}
+
+    </div>
+    {% endif %}
+
+</div>

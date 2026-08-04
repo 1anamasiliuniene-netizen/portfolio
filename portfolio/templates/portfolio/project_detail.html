@@ -1,0 +1,204 @@
+{% extends "portfolio/base.html" %}
+{% load static %}
+
+{% block title %}
+{{ project.title }} — Case Study
+{% endblock %}
+
+{% block content %}
+
+<!-- ======================================================
+     PROJECT-SPECIFIC TABLE OF CONTENTS
+     ====================================================== -->
+
+{% if project.slug == "a-terapija" %}
+
+{% include "portfolio/projects/includes/toc_a_terapija.html" %}
+
+{% elif project.slug == "mini-notion" %}
+
+{% include "portfolio/projects/includes/toc_mini_notion.html" %}
+
+{% elif project.slug == "future-case-study-test" %}
+
+{% include "portfolio/projects/includes/toc_future_case_study_test.html" %}
+
+{% endif %}
+
+
+<!-- ======================================================
+     PROJECT PREVIEW IMAGES
+     ====================================================== -->
+
+<div class="pf-project-preview-grid">
+
+    <figure class="pf-project-preview">
+
+        {% if project.desktop_image %}
+
+            <img
+                src="{{ project.desktop_image.url }}"
+                alt="Desktop interface of {{ project.title }}"
+                class="pf-project-preview-image"
+            >
+
+        {% else %}
+
+            <div class="pf-project-preview-placeholder">
+
+                <span>Desktop preview</span>
+
+            </div>
+
+        {% endif %}
+
+        <figcaption>
+            Desktop experience
+        </figcaption>
+
+    </figure>
+
+
+    <figure class="pf-project-preview">
+
+        {% if project.responsive_image %}
+
+            <img
+                src="{{ project.responsive_image.url }}"
+                alt="Responsive interface of {{ project.title }}"
+                class="pf-project-preview-image"
+            >
+
+        {% else %}
+
+            <div class="pf-project-preview-placeholder">
+
+                <span>Responsive preview</span>
+
+            </div>
+
+        {% endif %}
+
+        <figcaption>
+            Responsive experience
+        </figcaption>
+
+    </figure>
+
+</div>
+
+<!-- ======================================================
+     CASE STUDY CONTENT
+     ====================================================== -->
+
+{% if project.case_study_sections.exists %}
+
+    {% include "portfolio/projects/includes/case_study_sections.html" %}
+
+{% else %}
+
+    <section class="pf-section pf-section--soft pf-case-content">
+
+        <div class="pf-container">
+
+            {% if project.slug == "a-terapija" %}
+
+                {% include "portfolio/projects/a_terapija_content.html" %}
+
+            {% elif project.slug == "mini-notion" %}
+
+                {% include "portfolio/projects/mini_notion_content.html" %}
+
+            {% else %}
+
+                <div class="pf-content-width">
+
+                    <p class="pf-eyebrow">
+                        Case study
+                    </p>
+
+                    <h2 class="pf-heading-2">
+                        Case study coming soon
+                    </h2>
+
+                    <p class="pf-body">
+                        This project is being prepared for publication.
+                    </p>
+
+                </div>
+
+            {% endif %}
+
+        </div>
+
+    </section>
+
+{% endif %}
+
+<!-- ======================================================
+     PREVIOUS / NEXT PROJECT
+     ====================================================== -->
+
+<nav
+        class="pf-project-navigation pf-container"
+        aria-label="Case study navigation"
+>
+
+    <div class="pf-project-navigation-side">
+
+        {% if previous_project %}
+
+        <a
+                href="{% url 'portfolio:project_detail' previous_project.slug %}"
+                class="pf-project-navigation-link"
+        >
+
+                <span class="pf-project-navigation-label">
+                    Previous
+                </span>
+
+            <span class="pf-project-navigation-title">
+                    ← {{ previous_project.title }}
+                </span>
+
+        </a>
+
+        {% endif %}
+
+    </div>
+
+
+    <a
+            href="{% url 'portfolio:projects_list' %}"
+            class="pf-project-navigation-all"
+    >
+        All case studies
+    </a>
+
+
+    <div class="pf-project-navigation-side pf-project-navigation-side--next">
+
+        {% if next_project %}
+
+        <a
+                href="{% url 'portfolio:project_detail' next_project.slug %}"
+                class="pf-project-navigation-link"
+        >
+
+                <span class="pf-project-navigation-label">
+                    Next
+                </span>
+
+            <span class="pf-project-navigation-title">
+                    {{ next_project.title }} →
+                </span>
+
+        </a>
+
+        {% endif %}
+
+    </div>
+
+</nav>
+
+{% endblock %}
