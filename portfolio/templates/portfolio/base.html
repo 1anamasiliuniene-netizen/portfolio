@@ -81,6 +81,15 @@
                    <div class="pf-nav-dropdown"
                         id="pf-projects-menu">
 
+                       <a class="pf-nav-dropdown-link"
+                          href="{% url 'portfolio:projects_list' %}">
+
+                            <span>All case studies</span>
+
+                            <small>Project overview</small>
+
+                        </a>
+
                        {% for project in nav_projects %}
                        <a class="pf-nav-dropdown-link"
                           href="{% url 'portfolio:project_detail' slug=project.slug %}">

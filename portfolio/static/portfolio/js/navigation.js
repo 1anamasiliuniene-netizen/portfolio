@@ -55,12 +55,6 @@ document.addEventListener("DOMContentLoaded", () => {
         );
     });
 
-    navMenu?.querySelectorAll("a").forEach((link) => {
-
-        link.addEventListener("click", closeNavigation);
-
-    });
-
     navMenu
     ?.querySelectorAll("a:not(.pf-nav-dropdown-toggle)")
     .forEach((link) => {
