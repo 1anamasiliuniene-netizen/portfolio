@@ -42,6 +42,22 @@
                 class="pf-project-preview-image"
             >
 
+        {% elif project.slug == "a-terapija" %}
+
+            <img
+                src="{% static 'portfolio/images/projects/a-terapija_desktop.png' %}"
+                alt="Desktop interface of {{ project.title }}"
+                class="pf-project-preview-image"
+            >
+
+        {% elif project.slug == "mini-notion" %}
+
+            <img
+                src="{% static 'portfolio/images/projects/mini_notion_desktop.png' %}"
+                alt="Desktop interface of {{ project.title }}"
+                class="pf-project-preview-image"
+            >
+
         {% else %}
 
             <div class="pf-project-preview-placeholder">
@@ -65,6 +81,22 @@
 
             <img
                 src="{{ project.responsive_image.url }}"
+                alt="Responsive interface of {{ project.title }}"
+                class="pf-project-preview-image"
+            >
+
+        {% elif project.slug == "a-terapija" %}
+
+            <img
+                src="{% static 'portfolio/images/projects/a-terapija_responsive.png' %}"
+                alt="Responsive interface of {{ project.title }}"
+                class="pf-project-preview-image"
+            >
+
+        {% elif project.slug == "mini-notion" %}
+
+            <img
+                src="{% static 'portfolio/images/projects/mini_notion_responsive.png' %}"
                 alt="Responsive interface of {{ project.title }}"
                 class="pf-project-preview-image"
             >

@@ -69,6 +69,18 @@
                             alt="{{ project.title }} project preview"
                             class="pf-project-image"
                     >
+                    {% elif project.slug == "a-terapija" %}
+                    <img
+                            src="{% static 'portfolio/images/projects/a-terapija_desktop.png' %}"
+                            alt="{{ project.title }} project preview"
+                            class="pf-project-image"
+                    >
+                    {% elif project.slug == "mini-notion" %}
+                    <img
+                            src="{% static 'portfolio/images/projects/mini_notion_desktop.png' %}"
+                            alt="{{ project.title }} project preview"
+                            class="pf-project-image"
+                    >
                     {% else %}
                     <div class="pf-project-image-placeholder">
                         <span>{{ project.title }}</span>
