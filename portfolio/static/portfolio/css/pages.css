@@ -882,7 +882,10 @@
     grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
     gap: var(--pf-space-6);
 
-    width: 100%;
+    width: min(
+        calc(100% - (var(--pf-page-gutter) * 2)),
+        82rem
+    );
     max-width: 82rem;
     margin:
         var(--pf-space-7)
@@ -1072,22 +1075,23 @@
     }
 
     .pf-case-study {
-    display: flex;
-    flex-direction: column;
-    gap: var(--pf-case-section-gap);
-}
+        display: flex;
+        flex-direction: column;
+        gap: var(--pf-case-section-gap);
+    }
 
     .pf-project-hero-copy {
         margin-top: var(--pf-space-7);
     }
 
     .pf-project-preview-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: var(--pf-space-7);
-    max-width: 82rem;
-    margin: var(--pf-space-7) auto 0;
-}
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--pf-space-4);
+        width: calc(100% - (var(--pf-space-4) * 2));
+        max-width: 82rem;
+        margin: var(--pf-space-7) auto 0;
+    }
 
     .pf-project-overview-copy,
     .pf-project-overview-copy .pf-lead {
