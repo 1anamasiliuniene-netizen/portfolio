@@ -1,0 +1,73 @@
+<nav
+    class="pf-case-toc"
+    aria-label="Case study contents"
+>
+    <div class="pf-container">
+
+        <p class="pf-eyebrow">
+            Case study contents
+        </p>
+
+        <ol class="pf-case-toc-list">
+
+            {% for section in project.case_study_sections.all %}
+
+                <li>
+                    <a href="#section-{{ section.order|stringformat:'02d' }}">
+
+                        <span class="pf-case-toc-number">
+                            {% if section.section_number %}
+                                {{ section.section_number }}
+                            {% else %}
+                                {{ section.order|stringformat:"02d" }}
+                            {% endif %}
+                        </span>
+
+                        <span>
+                            {{ section.title }}
+                        </span>
+
+                    </a>
+                </li>
+
+            {% endfor %}
+
+        </ol>
+
+    </div>
+</nav>
+
+
+<div class="pf-container">
+
+    {% if project.live_url or project.source_url %}
+
+        <div class="pf-case-actions">
+
+            {% if project.live_url %}
+                <a
+                    href="{{ project.live_url }}"
+                    class="pf-case-action"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Live application
+                </a>
+            {% endif %}
+
+            {% if project.source_url %}
+                <a
+                    href="{{ project.source_url }}"
+                    class="pf-case-action"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Source code
+                </a>
+            {% endif %}
+
+        </div>
+
+    {% endif %}
+
+</div>

@@ -8,20 +8,20 @@
 {% block content %}
 
 <!-- ======================================================
-     PROJECT-SPECIFIC TABLE OF CONTENTS
+     PROJECT TABLE OF CONTENTS
      ====================================================== -->
 
-{% if project.slug == "a-terapija" %}
+{% if project.case_study_sections.exists %}
 
-{% include "portfolio/projects/includes/toc_a_terapija.html" %}
+    {% include "portfolio/projects/includes/toc_dynamic.html" %}
+
+{% elif project.slug == "a-terapija" %}
+
+    {% include "portfolio/projects/includes/toc_a_terapija.html" %}
 
 {% elif project.slug == "mini-notion" %}
 
-{% include "portfolio/projects/includes/toc_mini_notion.html" %}
-
-{% elif project.slug == "future-case-study-test" %}
-
-{% include "portfolio/projects/includes/toc_future_case_study_test.html" %}
+    {% include "portfolio/projects/includes/toc_mini_notion.html" %}
 
 {% endif %}
 
