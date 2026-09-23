@@ -1433,6 +1433,10 @@
     margin-top: var(--pf-space-8);
 }
 
+.pf-case-media-grid {
+    margin-bottom: var(--pf-space-7);
+}
+
 .pf-dashboard-comparison figure,
 .pf-case-media-grid figure {
     margin: 0;
