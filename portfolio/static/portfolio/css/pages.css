@@ -1423,7 +1423,8 @@
    05. DASHBOARD REDESIGN
    ========================================================== */
 
-.pf-dashboard-comparison {
+.pf-dashboard-comparison,
+.pf-case-media-grid {
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
     gap: var(--pf-space-8);
@@ -1432,11 +1433,13 @@
     margin-top: var(--pf-space-8);
 }
 
-.pf-dashboard-comparison figure {
+.pf-dashboard-comparison figure,
+.pf-case-media-grid figure {
     margin: 0;
 }
 
-.pf-dashboard-comparison img {
+.pf-dashboard-comparison img,
+.pf-case-media-grid img {
     display: block;
 
     width: 100%;
@@ -1445,7 +1448,8 @@
     border: 1px solid var(--pf-border-color);
 }
 
-.pf-dashboard-comparison figcaption {
+.pf-dashboard-comparison figcaption,
+.pf-case-media-grid figcaption {
     margin-top: var(--pf-space-3);
 
     color: var(--pf-text-muted);
