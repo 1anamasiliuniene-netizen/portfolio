@@ -893,6 +893,13 @@
         0;
 }
 
+@media (min-width: 1024px) {
+    .pf-project-preview-grid {
+        width: 80%;
+        max-width: none;
+    }
+}
+
 .pf-project-preview {
     margin: 0;
 }

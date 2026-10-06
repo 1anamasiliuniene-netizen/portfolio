@@ -270,6 +270,14 @@ a:hover {
     margin-inline: auto;
 }
 
+/* Shared desktop alignment for every public portfolio page. */
+@media (min-width: 1024px) {
+    .pf-container,
+    .pf-container-wide {
+        width: 80%;
+    }
+}
+
 .pf-editorial {
     width: min(100%, var(--pf-container-reading));
     margin-right: auto;
