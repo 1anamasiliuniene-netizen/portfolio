@@ -1470,3 +1470,20 @@
 /* ==========================================================
    06. PROJECT MANAGEMENT
    ========================================================== */
+
+/* Admin-created case studies: readable media without changing legacy layouts. */
+.pf-admin-case-media > figure {
+    min-width: 0;
+}
+
+.pf-admin-case-media > figure:only-child {
+    grid-column: 1 / -1;
+}
+
+@media (max-width: 64rem) {
+    .pf-admin-case-media,
+    .pf-project-preview-grid--admin {
+        grid-template-columns: minmax(0, 1fr);
+        gap: var(--pf-space-6);
+    }
+}
