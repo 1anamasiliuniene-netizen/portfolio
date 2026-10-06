@@ -32,15 +32,16 @@
 
             <li class="pf-project-item">
 
+                <div class="pf-project-label">
                     <span class="pf-project-number">
                         {{ forloop.counter|stringformat:"02d" }}
                     </span>
 
-                <div class="pf-project-content">
-
                     <p class="pf-project-meta">
                         {{ project.subtitle }}
                     </p>
+
+                </div>
 
                     <h2 class="pf-project-title">
                         {{ project.title }}
@@ -51,12 +52,10 @@
                     </p>
                     <a
                             href="{% url 'portfolio:project_detail' project.slug %}"
-                            class="pf-primary-link"
+                            class="pf-primary-link pf-project-cta"
                     >
                         View case study →
                     </a>
-
-                </div>
 
                 <a
                         href="{% url 'portfolio:project_detail' project.slug %}"

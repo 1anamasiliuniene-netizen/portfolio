@@ -282,12 +282,23 @@
 
 .pf-project-item {
     display: grid;
-    grid-template-columns:
-        3rem
-        minmax(0, 1fr)
-        minmax(20rem, 32rem);
-    gap: clamp(2rem, 5vw, 5rem);
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+    grid-template-areas:
+        "label label"
+        "title ."
+        "description image"
+        "cta .";
+    column-gap: clamp(2rem, 4vw, 4rem);
+    row-gap: var(--pf-space-5);
     align-items: center;
+}
+
+.pf-project-label {
+    grid-area: label;
+    display: flex;
+    align-items: baseline;
+    gap: var(--pf-space-5);
+    min-width: 0;
 }
 
 .pf-project-number {
@@ -299,8 +310,8 @@
     letter-spacing: .08em;
 }
 
-.pf-project-content {
-    min-width: 0;
+.pf-project-number {
+    flex-shrink: 0;
 }
 
 .pf-project-meta {
@@ -314,7 +325,8 @@
 }
 
 .pf-project-title {
-    margin: var(--pf-space-3) 0 0;
+    grid-area: title;
+    margin: 0;
 
     font-family: var(--pf-font-display);
     font-size: clamp(2.5rem, 3.8vw, 4rem);
@@ -323,29 +335,32 @@
 }
 
 .pf-project-description {
-    max-width: 46rem;
-    margin: var(--pf-space-5) 0 0;
+    grid-area: description;
+    min-width: 0;
+    margin: 0;
 
     color: var(--pf-text);
     font-size: var(--pf-text-lg);
     line-height: 1.65;
 }
 
-.pf-project-content .pf-primary-link {
-    display: flex;
-    width: 100%;
-    justify-content: flex-end;
-    margin-top: var(--pf-space-6);
+.pf-project-cta {
+    grid-area: cta;
+    justify-self: start;
+    margin: 0;
     color: var(--pf-accent);
     text-decoration: none;
 }
 
-.pf-project-content .pf-primary-link:hover,
-.pf-project-content .pf-primary-link:focus-visible {
+.pf-project-cta:hover,
+.pf-project-cta:focus-visible {
     color: var(--pf-accent-hover);
 }
 
 .pf-project-image-link {
+    grid-area: image;
+    min-width: 0;
+    align-self: center;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -408,26 +423,23 @@
 
 @media (max-width: 64rem) {
     .pf-project-item {
-        grid-template-columns: 2.5rem minmax(0, 1fr);
-    }
-
-    .pf-project-image-link {
-        grid-column: 2;
-        margin-top: var(--pf-space-5);
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas:
+            "label"
+            "title"
+            "image"
+            "description"
+            "cta";
     }
 }
+
 @media (max-width: 48rem) {
-    .pf-project-item {
-        grid-template-columns: 2rem minmax(0, 1fr);
+    .pf-project-label {
         gap: var(--pf-space-4);
     }
 
     .pf-project-title {
         font-size: clamp(2.4rem, 12vw, 3.5rem);
-    }
-
-    .pf-project-image-link {
-        grid-column: 1 / -1;
     }
 }
 /* ==========================================================
