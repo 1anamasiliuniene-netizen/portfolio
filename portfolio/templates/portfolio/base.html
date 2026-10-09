@@ -22,7 +22,8 @@
 
     <link rel="stylesheet" href="{% static 'portfolio/css/core.css' %}">
     <link rel="stylesheet" href="{% static 'portfolio/css/components.css' %}?v=practice-nav">
-    <link rel="stylesheet" href="{% static 'portfolio/css/pages.css' %}">
+    <link rel="stylesheet" href="{% static 'portfolio/css/pages.css' %}?v=image-viewer-1">
+    <link rel="stylesheet" href="{% static 'portfolio/css/image-viewer.css' %}?v=2">
     {% block extra_css %}{% endblock %}
 </head>
 
@@ -153,5 +154,14 @@
 
 <script src="{% static 'portfolio/js/navigation.js' %}"></script>
 
+<dialog class="pf-image-viewer" aria-label="Full-size image viewer">
+    <div class="pf-viewer-toolbar">
+        <button type="button" class="pf-viewer-size" aria-pressed="false">Actual size</button>
+        <button type="button" class="pf-viewer-close" aria-label="Close image viewer">Close ×</button>
+    </div>
+    <div class="pf-viewer-stage"><img alt=""></div>
+    <p class="pf-viewer-caption"></p>
+</dialog>
+<script src="{% static 'portfolio/js/image-viewer.js' %}?v=2" defer></script>
 </body>
 </html>

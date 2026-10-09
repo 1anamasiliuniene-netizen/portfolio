@@ -1517,3 +1517,10 @@
 @media (max-width: 48rem) {
     .pf-practice-entry { flex-direction: column; align-items: flex-start; gap: var(--pf-space-3); }
 }
+
+/* Stack evidence and previews before they become too small to inspect. */
+@media (max-width: 48rem) {
+    .pf-project-preview-grid,
+    .pf-dashboard-comparison,
+    .pf-case-media-grid { grid-template-columns: minmax(0, 1fr); gap: var(--pf-space-6); }
+}

@@ -56,11 +56,13 @@
 
                                 <figure class="pf-case-figure pf-case-figure--large">
 
-                                    <img
+                                    {% if section.large_image_allow_full_size %}<a class="pf-image-zoom" href="{{ section.large_image.url }}" aria-label="Enlarge image">{% endif %}
+<img
                                             src="{{ section.large_image.url }}"
                                             alt="{{ section.large_image_alt|default:section.title }}"
                                             class="pf-case-figure-image"
                                     >
+{% if section.large_image_allow_full_size %}<span class="pf-zoom-cue" aria-hidden="true">{% include "portfolio/includes/zoom_icon.html" %}</span></a>{% endif %}
 
                                     {% if section.large_image_caption %}
 
@@ -79,11 +81,13 @@
 
                                 <figure class="pf-case-figure pf-case-figure--small">
 
-                                    <img
+                                    {% if section.small_image_allow_full_size %}<a class="pf-image-zoom" href="{{ section.small_image.url }}" aria-label="Enlarge image">{% endif %}
+<img
                                             src="{{ section.small_image.url }}"
                                             alt="{{ section.small_image_alt|default:section.title }}"
                                             class="pf-case-figure-image"
                                     >
+{% if section.small_image_allow_full_size %}<span class="pf-zoom-cue" aria-hidden="true">{% include "portfolio/includes/zoom_icon.html" %}</span></a>{% endif %}
 
                                     {% if section.small_image_caption %}
 

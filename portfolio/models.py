@@ -81,6 +81,11 @@ class CaseStudySection(models.Model):
         null=True,
     )
 
+    large_image_allow_full_size = models.BooleanField(
+        "Allow full-size viewing", default=False,
+        help_text="Enable for detailed diagrams or screenshots readers need to inspect.",
+    )
+
     large_image_alt = models.CharField(
         max_length=255,
         blank=True,
@@ -95,6 +100,11 @@ class CaseStudySection(models.Model):
         upload_to="portfolio/case_studies/",
         blank=True,
         null=True,
+    )
+
+    small_image_allow_full_size = models.BooleanField(
+        "Allow full-size viewing", default=False,
+        help_text="Enable for detailed diagrams or screenshots readers need to inspect.",
     )
 
     small_image_alt = models.CharField(

@@ -36,27 +36,27 @@
 
         {% if project.desktop_image %}
 
-            <img
+            {% if project.slug == "a-terapija" or project.slug == "mini-notion" %}<a class="pf-image-zoom" href="{{ project.desktop_image.url }}" aria-label="Enlarge image">{% endif %}<img
                 src="{{ project.desktop_image.url }}"
                 alt="Desktop interface of {{ project.title }}"
                 class="pf-project-preview-image"
-            >
+            >{% if project.slug == "a-terapija" or project.slug == "mini-notion" %}<span class="pf-zoom-cue" aria-hidden="true">{% include "portfolio/includes/zoom_icon.html" %}</span></a>{% endif %}
 
         {% elif project.slug == "a-terapija" %}
 
-            <img
+            {% if project.slug == "a-terapija" or project.slug == "mini-notion" %}<a class="pf-image-zoom" href="{% static 'portfolio/images/projects/a-terapija_desktop.png' %}" aria-label="Enlarge image">{% endif %}<img
                 src="{% static 'portfolio/images/projects/a-terapija_desktop.png' %}"
                 alt="Desktop interface of {{ project.title }}"
                 class="pf-project-preview-image"
-            >
+            >{% if project.slug == "a-terapija" or project.slug == "mini-notion" %}<span class="pf-zoom-cue" aria-hidden="true">{% include "portfolio/includes/zoom_icon.html" %}</span></a>{% endif %}
 
         {% elif project.slug == "mini-notion" %}
 
-            <img
+            <a class="pf-image-zoom" href="{% static 'portfolio/images/projects/mini_notion_desktop.png' %}" aria-label="Enlarge image"><img
                 src="{% static 'portfolio/images/projects/mini_notion_desktop.png' %}"
                 alt="Desktop interface of {{ project.title }}"
                 class="pf-project-preview-image"
-            >
+            ><span class="pf-zoom-cue" aria-hidden="true">{% include "portfolio/includes/zoom_icon.html" %}</span></a>
 
         {% else %}
 
@@ -79,27 +79,27 @@
 
         {% if project.responsive_image %}
 
-            <img
+            {% if project.slug == "a-terapija" or project.slug == "mini-notion" %}<a class="pf-image-zoom" href="{{ project.responsive_image.url }}" aria-label="Enlarge image">{% endif %}<img
                 src="{{ project.responsive_image.url }}"
                 alt="Responsive interface of {{ project.title }}"
                 class="pf-project-preview-image"
-            >
+            >{% if project.slug == "a-terapija" or project.slug == "mini-notion" %}<span class="pf-zoom-cue" aria-hidden="true">{% include "portfolio/includes/zoom_icon.html" %}</span></a>{% endif %}
 
         {% elif project.slug == "a-terapija" %}
 
-            <img
+            {% if project.slug == "a-terapija" or project.slug == "mini-notion" %}<a class="pf-image-zoom" href="{% static 'portfolio/images/projects/a-terapija_responsive.png' %}" aria-label="Enlarge image">{% endif %}<img
                 src="{% static 'portfolio/images/projects/a-terapija_responsive.png' %}"
                 alt="Responsive interface of {{ project.title }}"
                 class="pf-project-preview-image"
-            >
+            >{% if project.slug == "a-terapija" or project.slug == "mini-notion" %}<span class="pf-zoom-cue" aria-hidden="true">{% include "portfolio/includes/zoom_icon.html" %}</span></a>{% endif %}
 
         {% elif project.slug == "mini-notion" %}
 
-            <img
+            <a class="pf-image-zoom" href="{% static 'portfolio/images/projects/mini_notion_responsive.png' %}" aria-label="Enlarge image"><img
                 src="{% static 'portfolio/images/projects/mini_notion_responsive.png' %}"
                 alt="Responsive interface of {{ project.title }}"
                 class="pf-project-preview-image"
-            >
+            ><span class="pf-zoom-cue" aria-hidden="true">{% include "portfolio/includes/zoom_icon.html" %}</span></a>
 
         {% else %}
 

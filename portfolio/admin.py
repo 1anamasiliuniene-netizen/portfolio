@@ -119,6 +119,7 @@ class CaseStudySectionAdmin(admin.ModelAdmin):
             {
                 "fields": (
                     "large_image",
+                    "large_image_allow_full_size",
                     "large_image_alt",
                     "large_image_caption",
                 ),
@@ -129,6 +130,7 @@ class CaseStudySectionAdmin(admin.ModelAdmin):
             {
                 "fields": (
                     "small_image",
+                    "small_image_allow_full_size",
                     "small_image_alt",
                     "small_image_caption",
                 ),

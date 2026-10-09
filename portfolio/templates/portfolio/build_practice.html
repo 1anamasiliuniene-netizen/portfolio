@@ -2,7 +2,7 @@
 {% load static %}
 {% block title %}Build your digital practice | Ana Masiliūnienė{% endblock %}
 {% block description %}Dream big. I’ll help you make it real. Explore, define and build a first digital product around your expertise and the way you want to work with clients.{% endblock %}
-{% block extra_css %}<link rel="stylesheet" href="{% static 'portfolio/css/practice.css' %}?v=consistent-layout-6">{% endblock %}
+{% block extra_css %}<link rel="stylesheet" href="{% static 'portfolio/css/practice.css' %}?v=consistent-layout-7">{% endblock %}
 
 {% block content %}
 <article class="pf-practice">
@@ -73,10 +73,8 @@
                 </div>
             </div>
             <figure class="pf-practice-figure">
-                <a href="{% static 'portfolio/images/projects/adhdbrain-practice.png' %}" aria-label="View the ADHDbrain homepage screenshot at full size">
                     <img src="{% static 'portfolio/images/projects/adhdbrain-practice.png' %}" width="2766" height="1634" loading="lazy" decoding="async" alt="ADHDbrain’s public homepage explains Eglė’s coaching approach and offers a clear way to book an introductory call.">
-                </a>
-                <figcaption>The public starting point: understand the approach and take the first step. Select the image to view it at full size.</figcaption>
+                <figcaption>The public starting point: understand the approach and take the first step.</figcaption>
             </figure>
             <div class="pf-practice-outcomes">
                 <div><h3 class="pf-heading-3">Clients know what comes next</h3><p>Upcoming sessions, preparation and agreed action steps have a home. Clients can return to session recaps and reflections instead of piecing the journey together from messages.</p></div>
@@ -84,7 +82,7 @@
                 <div><h3 class="pf-heading-3">Eglė can run the everyday work</h3><p>She can prepare for sessions, manage client information and handle ordinary administration in her own workspace. The product can keep evolving as the practice develops.</p></div>
             </div>
             <p class="pf-practice-reflection">What could having the right things in one place change for your practice?</p>
-            <a class="pf-practice-text-link" href="https://www.adhdbrain.org/">Visit ADHDbrain <span aria-hidden="true">↗</span></a>
+            <a class="pf-practice-text-link" href="https://www.adhdbrain.org/"><span class="pf-practice-link-label">Visit ADHDbrain</span> <span aria-hidden="true">→</span></a>
         </div>
                 </details>
                 <details class="pf-case-details">
@@ -98,12 +96,10 @@
                 <h2 class="pf-heading-2" id="practice-aterapija">Help people find their way to your services.</h2>
                 <p>Choosing wellbeing support can feel uncertain. A-Terapija brings service explanations, helpful articles and guidance together, so people can explore their options before booking.</p>
                 <p>It connects that first moment of curiosity to an appointment and a personal space — while giving practitioners tools to manage services and availability.</p>
-                <a class="pf-practice-text-link" href="{% url 'portfolio:project_detail' slug='a-terapija' %}">Explore the A-Terapija project <span aria-hidden="true">→</span></a>
+                <a class="pf-practice-text-link" href="{% url 'portfolio:project_detail' slug='a-terapija' %}"><span class="pf-practice-link-label">Explore the A-Terapija project</span> <span aria-hidden="true">→</span></a>
             </div>
             <figure class="pf-practice-figure">
-                <a href="{% static 'portfolio/images/projects/a-terapija_desktop.png' %}" aria-label="View the A-Terapija homepage screenshot at full size">
                     <img src="{% static 'portfolio/images/projects/a-terapija_desktop.png' %}" width="2876" height="1542" loading="lazy" decoding="async" alt="A-Terapija’s homepage offers two starting points: explore services or read helpful articles.">
-                </a>
                 <figcaption>A clearer first step for people exploring wellbeing support.</figcaption>
             </figure>
         </div>

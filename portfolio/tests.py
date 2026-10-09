@@ -36,3 +36,39 @@ class PracticePageTests(TestCase):
         self.assertContains(response, 'href="/build-your-practice/"', count=2)
         self.assertContains(response, "Visible project")
         self.assertNotContains(response, "Private project")
+
+@override_settings(STORAGES={
+    "default": {"BACKEND": "django.core.files.storage.FileSystemStorage"},
+    "staticfiles": {"BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage"},
+})
+class ImageViewingTests(TestCase):
+    def test_admin_images_are_individually_opt_in(self):
+        from .models import Project, CaseStudySection
+        project = Project.objects.create(title="Evidence", slug="evidence")
+        section = CaseStudySection.objects.create(project=project, title="Comparison",
+            large_image="large.png", small_image="small.png")
+        url = reverse("portfolio:project_detail", args=[project.slug])
+        self.assertNotContains(self.client.get(url), 'class="pf-image-zoom"')
+        section.large_image_allow_full_size = True
+        section.save()
+        response = self.client.get(url)
+        self.assertContains(response, 'class="pf-image-zoom"', count=1)
+        self.assertContains(response, 'href="/media/large.png"')
+        self.assertNotContains(response, 'href="/media/small.png"')
+        section.small_image_allow_full_size = True
+        section.save()
+        self.assertContains(self.client.get(url), 'class="pf-image-zoom"', count=2)
+
+    def test_legacy_images_are_selective(self):
+        from .models import Project
+        for slug, count in [("a-terapija", 4), ("mini-notion", 8)]:
+            Project.objects.get_or_create(slug=slug, defaults={"title": slug})
+            self.assertContains(self.client.get(reverse("portfolio:project_detail", args=[slug])),
+                                'class="pf-image-zoom"', count=count)
+
+    def test_examples_and_portrait_do_not_enlarge(self):
+        response = self.client.get(reverse("portfolio:build_practice"))
+        self.assertNotContains(response, 'class="pf-image-zoom"')
+        self.assertNotContains(response, 'Select the image')
+        self.assertNotContains(response, 'aria-label="View the')
+        self.assertNotContains(self.client.get(reverse("portfolio:about")), 'class="pf-image-zoom"')

@@ -58,3 +58,6 @@
 .pf-practice-examples { margin-top: var(--pf-space-7); }
 .pf-practice-example-body { padding-block: var(--pf-space-5) var(--pf-space-7); }
 .pf-practice-example-body .pf-heading-2 { font-size: clamp(1.75rem, 3vw, 3rem); }
+
+.pf-practice-text-link { text-decoration: none; }
+.pf-practice-link-label { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .2em; }
