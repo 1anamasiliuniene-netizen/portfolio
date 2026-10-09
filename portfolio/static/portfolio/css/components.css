@@ -838,3 +838,11 @@
         0
         var(--pf-space-7);
 }
+
+/* Keep the descriptive navigation labels on one line on desktop. */
+@media (min-width: 64.001rem) {
+    .pf-nav { gap: var(--pf-space-5); }
+    .pf-brand { flex-shrink: 0; }
+    .pf-nav-menu { gap: clamp(.75rem, 1.4vw, 1.5rem); }
+    .pf-nav-link { font-size: 1rem; white-space: nowrap; }
+}

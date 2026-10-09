@@ -1,0 +1,155 @@
+{% extends "portfolio/base.html" %}
+{% load static %}
+{% block title %}Build your digital practice | Ana Masiliūnienė{% endblock %}
+{% block description %}Dream big. I’ll help you make it real. Explore, define and build a first digital product around your expertise and the way you want to work with clients.{% endblock %}
+{% block extra_css %}<link rel="stylesheet" href="{% static 'portfolio/css/practice.css' %}?v=consistent-layout-6">{% endblock %}
+
+{% block content %}
+<article class="pf-practice">
+    <header class="pf-section pf-practice-hero">
+        <div class="pf-container">
+            <p class="pf-eyebrow">Build your practice</p>
+            <h1 class="pf-heading-1">Dream big.<br><span>I’ll help you make it real.</span></h1>
+            <div class="pf-practice-hero-copy">
+                <p class="pf-lead">You know your expertise and how you want to work with people. You don’t need to know what technology can do.</p>
+                <p>I help coaches, consultants, educators and practitioners turn that vision into a useful first digital product — from exploring the idea to designing and building it.</p>
+                <a class="pf-practice-cta" href="{% url 'portfolio:about' %}#contact">Explore your idea with me</a>
+                <p class="pf-practice-note">Bring an idea, a frustration, or simply a “what if?”</p>
+            </div>
+        </div>
+    </header>
+
+    <section class="pf-section pf-section--soft" aria-labelledby="practice-problem">
+        <div class="pf-container">
+            <p class="pf-eyebrow">Sound familiar?</p>
+            <div class="pf-practice-split">
+                <h2 class="pf-heading-2" id="practice-problem">Too many tools. You’re left connecting the pieces.</h2>
+            <div class="pf-practice-copy">
+                <p>Bookings in a calendar. Conversations in email. Notes and exercises in separate files. You’re moving information, sending reminders and helping clients find what they need.</p>
+                <p>Each tool may work well. But adding them one by one can leave you adapting your practice to the tools — with more to untangle later.</p>
+                <p>I help you bring the whole picture into focus. Together, we explore how you want to work with clients, decide what belongs in the first version and build it with room to grow.</p>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pf-section" aria-labelledby="practice-possibilities">
+        <div class="pf-container">
+            <div class="pf-practice-intro">
+                <p class="pf-eyebrow">Imagine your working day</p>
+                <h2 class="pf-heading-2" id="practice-possibilities">What could your practice become?</h2>
+                <p class="pf-lead">Your expertise is already the product. Together, we can discover what it could become digitally.</p>
+            </div>
+            <dl class="pf-practice-possibilities">
+                <div><dt>A clearer beginning</dt><dd>People understand your services, find useful content and see whether you’re right for them. New clients arrive with the information and preparation you need.</dd></div>
+                <div><dt>Less back-and-forth</dt><dd>Clients book or reschedule sessions, find their meeting link and make payments without a chain of emails. Helpful reminders take some of the remembering off your plate.</dd></div>
+                <div><dt>Support between sessions</dt><dd>Clients have one place for resources, exercises and action plans. They can prepare, stay in touch, see what comes next and recognise the progress they’ve made.</dd></div>
+                <div><dt>More room for your work</dt><dd>Keep everyday information together and reduce repetitive administration. Where it genuinely helps, carefully chosen automation or AI can support a task while you stay in control.</dd></div>
+            </dl>
+            <p class="pf-practice-aside">Your practice may need some of these. It may need something completely different. Discovering that is part of the work.</p>
+        </div>
+    </section>
+
+    <section class="pf-section pf-section--soft pf-practice-proof" aria-labelledby="practice-examples-title">
+        <div class="pf-container">
+            <p class="pf-eyebrow">In practice</p>
+            <h2 class="pf-heading-2" id="practice-examples-title">See examples</h2>
+            <div class="pf-practice-examples pf-findings-list">
+                <details class="pf-case-details">
+                    <summary class="pf-case-details-summary">
+                        <span class="pf-finding-heading"><span class="pf-finding-number">01</span><span class="pf-finding-title">ADHDbrain — a place for the whole coaching journey</span></span>
+                        <span class="pf-details-arrow" aria-hidden="true">↘</span>
+                    </summary>
+                    <div class="pf-practice-example-body">
+            <div class="pf-practice-split">
+                <div>
+                    <p class="pf-eyebrow">In practice · ADHDbrain</p>
+                    <h2 class="pf-heading-2" id="practice-adhd">A coaching practice.<br>A place for the whole journey.</h2>
+                </div>
+                <div class="pf-practice-copy">
+                    <p>Eglė was building her ADHD coaching practice. A simple website and video calls would not support everything she wanted to do with clients, especially between sessions.</p>
+                    <p>We explored how she wanted to work, what her clients needed and what technology could make possible. Then we shaped a useful first version of that larger vision.</p>
+                    <p>That became ADHDbrain: a digital environment built around her coaching practice, with connected spaces for clients and their coach.</p>
+                </div>
+            </div>
+            <figure class="pf-practice-figure">
+                <a href="{% static 'portfolio/images/projects/adhdbrain-practice.png' %}" aria-label="View the ADHDbrain homepage screenshot at full size">
+                    <img src="{% static 'portfolio/images/projects/adhdbrain-practice.png' %}" width="2766" height="1634" loading="lazy" decoding="async" alt="ADHDbrain’s public homepage explains Eglė’s coaching approach and offers a clear way to book an introductory call.">
+                </a>
+                <figcaption>The public starting point: understand the approach and take the first step. Select the image to view it at full size.</figcaption>
+            </figure>
+            <div class="pf-practice-outcomes">
+                <div><h3 class="pf-heading-3">Clients know what comes next</h3><p>Upcoming sessions, preparation and agreed action steps have a home. Clients can return to session recaps and reflections instead of piecing the journey together from messages.</p></div>
+                <div><h3 class="pf-heading-3">Scheduling takes fewer messages</h3><p>Booking and session information are connected to the coaching experience. Clients can find their next session and join the call from their own space.</p></div>
+                <div><h3 class="pf-heading-3">Eglė can run the everyday work</h3><p>She can prepare for sessions, manage client information and handle ordinary administration in her own workspace. The product can keep evolving as the practice develops.</p></div>
+            </div>
+            <p class="pf-practice-reflection">What could having the right things in one place change for your practice?</p>
+            <a class="pf-practice-text-link" href="https://www.adhdbrain.org/">Visit ADHDbrain <span aria-hidden="true">↗</span></a>
+        </div>
+                </details>
+                <details class="pf-case-details">
+                    <summary class="pf-case-details-summary">
+                        <span class="pf-finding-heading"><span class="pf-finding-number">02</span><span class="pf-finding-title">A-Terapija — a clearer path to wellbeing services</span></span>
+                        <span class="pf-details-arrow" aria-hidden="true">↘</span>
+                    </summary>
+                    <div class="pf-practice-example-body pf-practice-secondary">
+            <div class="pf-practice-copy">
+                <p class="pf-eyebrow">Another example · A-Terapija</p>
+                <h2 class="pf-heading-2" id="practice-aterapija">Help people find their way to your services.</h2>
+                <p>Choosing wellbeing support can feel uncertain. A-Terapija brings service explanations, helpful articles and guidance together, so people can explore their options before booking.</p>
+                <p>It connects that first moment of curiosity to an appointment and a personal space — while giving practitioners tools to manage services and availability.</p>
+                <a class="pf-practice-text-link" href="{% url 'portfolio:project_detail' slug='a-terapija' %}">Explore the A-Terapija project <span aria-hidden="true">→</span></a>
+            </div>
+            <figure class="pf-practice-figure">
+                <a href="{% static 'portfolio/images/projects/a-terapija_desktop.png' %}" aria-label="View the A-Terapija homepage screenshot at full size">
+                    <img src="{% static 'portfolio/images/projects/a-terapija_desktop.png' %}" width="2876" height="1542" loading="lazy" decoding="async" alt="A-Terapija’s homepage offers two starting points: explore services or read helpful articles.">
+                </a>
+                <figcaption>A clearer first step for people exploring wellbeing support.</figcaption>
+            </figure>
+        </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <section class="pf-section pf-section--soft" aria-labelledby="practice-process">
+        <div class="pf-container">
+            <div class="pf-practice-intro">
+                <p class="pf-eyebrow">How we work together</p>
+                <h2 class="pf-heading-2" id="practice-process">Start with the vision.<br>Build what you need now.</h2>
+                <p class="pf-lead">I bring research, product thinking, design and development into one conversation — and carry it through to a working product.</p>
+            </div>
+            <ol class="pf-practice-process">
+                <li><span class="pf-eyebrow" aria-hidden="true">01</span><h3 class="pf-heading-3">Dream</h3><p>Tell me how you’d love your practice to work. Bring frustrations, ambitious wishes and examples that inspire you.</p></li>
+                <li><span class="pf-eyebrow" aria-hidden="true">02</span><h3 class="pf-heading-3">Discover</h3><p>We explore your clients, your way of working and possibilities you may not yet have considered.</p></li>
+                <li><span class="pf-eyebrow" aria-hidden="true">03</span><h3 class="pf-heading-3">Define</h3><p>We agree on a useful first product: what matters now, what can wait and what doesn’t need to be built.</p></li>
+                <li><span class="pf-eyebrow" aria-hidden="true">04</span><h3 class="pf-heading-3">Build</h3><p>I design and develop that agreed first version, so the idea becomes something you can use.</p></li>
+                <li><span class="pf-eyebrow" aria-hidden="true">05</span><h3 class="pf-heading-3">Grow</h3><p>Real use shows what’s needed next. Your product can evolve as your practice and your clients’ needs develop.</p></li>
+            </ol>
+            <p class="pf-practice-aside">Dream big first. Scope intelligently second. After discovery, I define and quote the agreed first version. New functionality can be scoped and priced separately when you’re ready.</p>
+        </div>
+    </section>
+
+    <section class="pf-section" aria-labelledby="practice-ownership">
+        <div class="pf-container">
+            <p class="pf-eyebrow">Your practice, in your hands</p>
+            <div class="pf-practice-split">
+            <h2 class="pf-heading-2" id="practice-ownership">Everyday changes shouldn’t need a developer.</h2>
+            <div class="pf-practice-copy"><p>A new service. A different price. A resource you want to share. Where it makes sense for your product, you should be able to manage these ordinary changes yourself.</p><p>We agree what you need to control as part of the scope. You get a product that supports your practice, with room to ask for help when you want to take it further.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pf-section pf-practice-final" aria-labelledby="practice-conversation">
+        <div class="pf-container">
+            <div class="pf-practice-intro">
+                <p class="pf-eyebrow">Let’s start with a conversation</p>
+                <h2 class="pf-heading-2" id="practice-conversation">Tell me how you dream of working.</h2>
+                <p class="pf-lead">You don’t need a specification or a feature list.</p>
+                <p>Tell me about your practice, your clients, what frustrates you now and what you wish were possible. We’ll start there.</p>
+                <a class="pf-practice-cta" href="{% url 'portfolio:about' %}#contact">Explore your idea with me</a>
+            </div>
+        </div>
+    </section>
+</article>
+{% endblock %}

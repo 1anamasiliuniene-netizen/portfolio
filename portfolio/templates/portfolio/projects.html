@@ -26,6 +26,14 @@
 
         </header>
 
+        <aside class="pf-practice-entry" aria-labelledby="practice-entry-title">
+            <div>
+                <h2 id="practice-entry-title">Building your own practice?</h2>
+                <p>Your expertise can become more than a website. Explore what your digital practice could become.</p>
+            </div>
+            <a href="{% url 'portfolio:build_practice' %}">Explore what’s possible <span aria-hidden="true">→</span></a>
+        </aside>
+
         <ol class="pf-project-list">
 
             {% for project in projects %}

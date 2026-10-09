@@ -101,3 +101,7 @@ def resume(request):
             "additional_certificates": additional_certificates,
         },
     )
+
+
+def build_practice(request):
+    return render(request, "portfolio/build_practice.html")

@@ -1,0 +1,60 @@
+/* Client page only; shared typography, navigation and tokens stay in the base. */
+.pf-practice { --practice-accent: var(--pf-accent); --practice-intro-width: 56rem; --practice-reading-width: 44rem; --pf-section-space: clamp(4.5rem, 8vw, 7rem); }
+.pf-practice .pf-practice-proof { padding-block: clamp(4rem, 5.5vw, 5rem); }
+.pf-practice .pf-eyebrow { color: var(--practice-accent); }
+.pf-practice p { text-wrap: pretty; }
+.pf-practice-hero { padding-block: clamp(4rem, 8vw, 7rem); }
+.pf-practice-hero h1 { max-width: 19ch; line-height: 1.04; }
+.pf-practice-hero h1 span { color: var(--pf-text); }
+.pf-practice-hero-copy { max-width: var(--practice-intro-width); margin-top: var(--pf-space-7); }
+.pf-practice-hero-copy .pf-lead { max-width: var(--practice-intro-width); }
+.pf-practice-hero-copy > p:not(.pf-lead):not(.pf-practice-note) { max-width: 52rem; margin-block: var(--pf-space-5); }
+.pf-practice-cta { display: inline-flex; align-items: center; justify-content: center; min-height: 3.25rem; padding: .85rem 1.25rem; border: 1px solid var(--practice-accent); border-radius: var(--pf-radius-sm); background: transparent; color: var(--pf-tomato-700); font-size: 1rem; font-weight: 600; text-decoration: none; }
+.pf-practice-cta:hover { color: var(--pf-tomato-700); background: var(--pf-surface-muted); }
+.pf-practice a:focus-visible { outline: 2px solid var(--practice-accent); outline-offset: 4px; }
+.pf-practice-note { color: var(--pf-text-muted); font-size: var(--pf-text-sm); margin-top: var(--pf-space-4); }
+.pf-practice-split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(2rem, 6vw, 6rem); }
+.pf-practice-copy { max-width: 42rem; }
+.pf-practice-copy > p:first-child { margin-top: 0; }
+.pf-practice-copy > p:last-child { margin-bottom: 0; }
+.pf-practice-intro { max-width: var(--practice-intro-width); }
+.pf-practice-intro .pf-lead { max-width: var(--practice-intro-width); margin-top: var(--pf-space-5); }
+.pf-practice-intro > p:not(.pf-eyebrow):not(.pf-lead) { max-width: var(--practice-reading-width); }
+.pf-practice-possibilities { margin: var(--pf-space-8) 0 0; }
+.pf-practice-possibilities > div { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: var(--pf-space-6); padding-block: var(--pf-space-6); border-top: 1px solid var(--pf-border); }
+.pf-practice-possibilities dt { font-weight: 600; font-size: var(--pf-text-lg); }
+.pf-practice-possibilities dd { margin: 0; max-width: 44rem; }
+.pf-practice-aside { max-width: 52rem; padding-left: var(--pf-space-5); border-left: 2px solid var(--practice-accent); margin: var(--pf-space-7) 0 0; }
+.pf-practice-figure { margin: var(--pf-space-7) 0; min-width: 0; }
+.pf-practice-figure a { display: block; }
+.pf-practice-figure img { width: 100%; height: auto; border: 1px solid var(--pf-border); border-radius: var(--pf-radius-md); }
+.pf-practice-figure figcaption { margin-top: var(--pf-space-4); color: var(--pf-text-muted); font-size: var(--pf-text-sm); max-width: 50rem; }
+.pf-practice-outcomes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--pf-space-7); }
+.pf-practice-outcomes h3 { font-size: var(--pf-text-lg); }
+.pf-practice-reflection { font-family: var(--pf-font-display); font-size: clamp(1.75rem, 3vw, 2.5rem); line-height: 1.2; max-width: 36ch; margin: var(--pf-space-7) 0 var(--pf-space-4); }
+.pf-practice-text-link { display: inline-flex; align-items: center; gap: .5rem; min-height: 44px; color: var(--practice-accent); font-weight: 500; }
+.pf-practice-secondary { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: var(--pf-space-7); align-items: center; }
+.pf-practice-secondary figure { margin: 0; }
+.pf-practice-process { list-style: none; padding: 0; margin: var(--pf-space-7) 0 0; }
+.pf-practice-process li { display: grid; grid-template-columns: 2rem minmax(7rem, 1fr) minmax(0, 2fr); gap: var(--pf-space-6); align-items: baseline; border-top: 1px solid var(--pf-border); padding-block: var(--pf-space-5); }
+.pf-practice-process .pf-eyebrow { display: block; margin: 0; }
+.pf-practice-process p { font-size: var(--pf-text-base); max-width: var(--practice-reading-width); margin: 0; }
+.pf-practice-final { background: var(--pf-bg-soft); }
+.pf-practice-final .pf-practice-cta { margin-top: var(--pf-space-4); }
+@media (max-width: 48rem) {
+    .pf-practice-split, .pf-practice-secondary, .pf-practice-outcomes { grid-template-columns: 1fr; gap: var(--pf-space-6); }
+    .pf-practice-hero h1 { font-size: clamp(2.65rem, 10.5vw, 4.8rem); }
+    .pf-practice-hero-copy { margin-top: var(--pf-space-6); }
+    .pf-practice-possibilities > div { grid-template-columns: 1fr; gap: var(--pf-space-3); }
+    .pf-practice-process li { grid-template-columns: 2rem minmax(0, 1fr); gap: var(--pf-space-3) var(--pf-space-4); }
+    .pf-practice-process p { grid-column: 2; }
+    .pf-practice-process .pf-eyebrow { margin: 0; }
+    .pf-practice-outcomes p { margin-bottom: 0; }
+}
+@media (max-width: 30rem) {
+    .pf-practice-cta { width: 100%; gap: var(--pf-space-3); }
+}
+
+.pf-practice-examples { margin-top: var(--pf-space-7); }
+.pf-practice-example-body { padding-block: var(--pf-space-5) var(--pf-space-7); }
+.pf-practice-example-body .pf-heading-2 { font-size: clamp(1.75rem, 3vw, 3rem); }

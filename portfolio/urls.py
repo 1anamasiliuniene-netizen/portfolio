@@ -10,6 +10,7 @@ app_name = "portfolio"
 
 urlpatterns = [
     path('', lambda request: redirect('portfolio:projects_list')),
+    path('build-your-practice/', views.build_practice, name='build_practice'),
     path('about/', views.about, name='about'),
     path("projects/", ProjectListView.as_view(), name="projects_list",),
     path("projects/<slug:slug>/", ProjectDetailView.as_view(), name="project_detail",),
