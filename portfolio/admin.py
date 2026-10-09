@@ -69,7 +69,9 @@ class ProjectAdmin(admin.ModelAdmin):
                 "fields": (
                     "cover_image",
                     "desktop_image",
+                    "desktop_image_allow_full_size",
                     "responsive_image",
+                    "responsive_image_allow_full_size",
                 ),
             },
         ),

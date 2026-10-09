@@ -72,3 +72,20 @@ class ImageViewingTests(TestCase):
         self.assertNotContains(response, 'Select the image')
         self.assertNotContains(response, 'aria-label="View the')
         self.assertNotContains(self.client.get(reverse("portfolio:about")), 'class="pf-image-zoom"')
+
+    def test_project_preview_controls(self):
+        from .models import Project
+        from .admin import ProjectAdmin
+        from django.contrib.admin.sites import AdminSite
+        project = Project.objects.create(title="Uploaded", slug="uploaded", desktop_image="desktop.png", responsive_image="responsive.png")
+        url = reverse("portfolio:project_detail", args=[project.slug])
+        self.assertNotContains(self.client.get(url), 'class="pf-image-zoom"')
+        project.desktop_image_allow_full_size = True
+        project.save()
+        self.assertContains(self.client.get(url), 'class="pf-image-zoom"', count=1)
+        project.responsive_image_allow_full_size = True
+        project.save()
+        self.assertContains(self.client.get(url), 'class="pf-image-zoom"', count=2)
+        fields = ProjectAdmin(Project, AdminSite()).get_form(None).base_fields
+        self.assertIn("desktop_image_allow_full_size", fields)
+        self.assertIn("responsive_image_allow_full_size", fields)

@@ -36,11 +36,11 @@
 
         {% if project.desktop_image %}
 
-            {% if project.slug == "a-terapija" or project.slug == "mini-notion" %}<a class="pf-image-zoom" href="{{ project.desktop_image.url }}" aria-label="Enlarge image">{% endif %}<img
+            {% if project.desktop_image_allow_full_size %}<a class="pf-image-zoom" href="{{ project.desktop_image.url }}" aria-label="Enlarge image">{% endif %}<img
                 src="{{ project.desktop_image.url }}"
                 alt="Desktop interface of {{ project.title }}"
                 class="pf-project-preview-image"
-            >{% if project.slug == "a-terapija" or project.slug == "mini-notion" %}<span class="pf-zoom-cue" aria-hidden="true">{% include "portfolio/includes/zoom_icon.html" %}</span></a>{% endif %}
+            >{% if project.desktop_image_allow_full_size %}<span class="pf-zoom-cue" aria-hidden="true">{% include "portfolio/includes/zoom_icon.html" %}</span></a>{% endif %}
 
         {% elif project.slug == "a-terapija" %}
 
@@ -79,11 +79,11 @@
 
         {% if project.responsive_image %}
 
-            {% if project.slug == "a-terapija" or project.slug == "mini-notion" %}<a class="pf-image-zoom" href="{{ project.responsive_image.url }}" aria-label="Enlarge image">{% endif %}<img
+            {% if project.responsive_image_allow_full_size %}<a class="pf-image-zoom" href="{{ project.responsive_image.url }}" aria-label="Enlarge image">{% endif %}<img
                 src="{{ project.responsive_image.url }}"
                 alt="Responsive interface of {{ project.title }}"
                 class="pf-project-preview-image"
-            >{% if project.slug == "a-terapija" or project.slug == "mini-notion" %}<span class="pf-zoom-cue" aria-hidden="true">{% include "portfolio/includes/zoom_icon.html" %}</span></a>{% endif %}
+            >{% if project.responsive_image_allow_full_size %}<span class="pf-zoom-cue" aria-hidden="true">{% include "portfolio/includes/zoom_icon.html" %}</span></a>{% endif %}
 
         {% elif project.slug == "a-terapija" %}
 

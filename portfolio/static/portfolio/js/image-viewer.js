@@ -17,7 +17,7 @@
         const thumbnail = link.querySelector('img');
         const originalUrl = link.getAttribute('href');
         const label = `Enlarge image: ${thumbnail.alt || 'Case study image'}`;
-        const stacked = window.matchMedia(link.closest('.pf-admin-case-media')
+        const stacked = window.matchMedia(link.closest('.pf-admin-case-media, .pf-project-preview-grid--admin')
             ? '(max-width: 64rem)' : '(max-width: 48rem)');
         const updateAvailability = () => {
             link.toggleAttribute('data-zoom-disabled', stacked.matches);

@@ -29,6 +29,9 @@ class Project(models.Model):
         null=True,
     )
 
+    desktop_image_allow_full_size = models.BooleanField("Allow full-size viewing", default=False)
+    responsive_image_allow_full_size = models.BooleanField("Allow full-size viewing", default=False)
+
     live_url = models.URLField(
         max_length=500,
         blank=True,
